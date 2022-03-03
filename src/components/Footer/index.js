@@ -6,71 +6,63 @@ import {
   FaFacebook,
   FaTwitter,
 } from "react-icons/fa";
-import { RiInstagramFill } from "react-icons/ri";
+import { AiFillTwitterCircle, AiFillGoogleCircle } from "react-icons/ai";
 
 const Footer = () => {
   return (
     <>
       <footer className="footer">
         <Container>
-          <Row>
-            <Col md={3} className="footer__blocks footer__blocks--about">
-              <h5 className="footer__blocks--header mb-30">
-                About Paicho Pasal{" "}
-              </h5>
+          <Row className="footer-one">
+            <Col lg={3} className="footer__blocks footer__blocks--about">
+              <h5 className="footer__blocks--header mb-30">About Sajha Menu</h5>
               <p className="footer__blocks--content">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit leo
-                consequat tincidunt tortor risus, mattis enim varius. Pulvinar
-                molestie
+                Sajha Menu has one primary objective that is to upsell your food
+                by presenting it in the best way possible. Its simplistic, easy
+                to use, interface creates a fluid experience that keeps your
+                guests engaged and ordering more .
               </p>
             </Col>
-            <Col md={3} className="footer__blocks footer__blocks--quick-links">
+            <Col lg={3} className="footer__blocks footer__blocks--quick-links">
               <h5 className="footer__blocks--header mb-30">Quick Links </h5>
               <ul className="clearfix footer__blocks--content">
                 <li className="mb-10">
-                  <a href="#about">About Paicho </a>
+                  <a href="#poplicy">Support</a>
                 </li>
                 <li className="mb-10">
-                  <a href="#poplicy">Return & Refund Policy</a>
+                  <a href="#terms">Privacy Policy</a>
                 </li>
                 <li className="mb-10">
-                  <a href="#terms">Terms & Condition</a>
-                </li>
-                <li className="mb-10">
-                  <a href="#privacy">Privacy Policy </a>
+                  <a href="#privacy">Terms and Conditions </a>
                 </li>
               </ul>
             </Col>
-            <Col md={3} className="footer__blocks footer__blocks--contact">
+            <Col lg={3} className="footer__blocks footer__blocks--contact">
               <h5 className="footer__blocks--header mb-30">
-                Customer Support{" "}
+                Contact Information
               </h5>
 
               <ul className="clearfix footer__blocks--content">
                 <li className="mb-20">
-                  {" "}
                   <FaPhoneAlt className="icon mr-13" />
-                  071-540545, 986745345
+                  9812345678
                 </li>
                 <li className="mb-20">
                   <FaEnvelope className="icon mr-13" />
-                  paichopasal@gmail.com
+                  sajhamenu@gmail.com
                 </li>
                 <li className="mb-20">
-                  {" "}
                   <FaMapMarkerAlt className="icon mr-13" />
-                  Milanchowk , Butwal{" "}
+                  Yogikuti 3, Rupandehi, Nepal
                 </li>
               </ul>
             </Col>
-            <Col md={3} className="footer__blocks footer__blocks--social-media">
-              <h5 className="footer__blocks--header mb-30">
-                Social Media Links{" "}
-              </h5>
+            <Col lg={2} className="footer__blocks footer__blocks--social-media">
+              <h5 className="footer__blocks--header mb-30">Social Media</h5>
               <p className="footer__blocks--content">
                 <FaFacebook className="icon mr-13" />
-                <RiInstagramFill className="icon mr-13" />
-                <FaTwitter className="icon" />
+                <AiFillTwitterCircle className="icon mr-13" />
+                <AiFillGoogleCircle className="icon" />
               </p>
             </Col>
           </Row>
@@ -79,7 +71,8 @@ const Footer = () => {
             <Col lg={12}>
               <div className="footer__bottom">
                 <div className="footer__bottom--center">
-                  <span>Copyright © Paicho Pasal 2022| All Right Reserved</span>
+                  <span>Copyright © Sajha Menu 2022. All Right Reserved.</span>
+                  <p>Powered By Tuna Technology.</p>
                 </div>
               </div>
             </Col>

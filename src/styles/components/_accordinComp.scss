@@ -1,0 +1,30 @@
+.accordion {
+  margin-bottom: 11px;
+  .accordion-item {
+    border: none;
+    background-color: rgba(221, 221, 221, 0.2);
+  }
+
+  h2.accordion-header {
+    font-family: "Raleway", sans-serif;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 30px;
+    color: #303030;
+  }
+
+  .accordion-button {
+    padding: 34px 49px 34px 24px;
+    font-family: "Raleway", sans-serif;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 30px;
+    color: #303030;
+  }
+
+  button.accordion-button.collapsed {
+    // padding: 0;
+    background-color: rgba(221, 221, 221, 0.2);
+    border-radius: 7px;
+  }
+}
