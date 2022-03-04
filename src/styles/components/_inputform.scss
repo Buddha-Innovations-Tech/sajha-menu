@@ -1,14 +1,21 @@
-.modal-body {
-  padding: 28px 43px !important;
-  font-family: "Mulish", sans-serif;
-  font-weight: normal;
-  font-size: 16px;
+.modal-header {
+  border: none !important;
+  padding: 28px 43px 6px 43px !important;
 
   h2 {
+    font-family: "Mulish", sans-serif;
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 6px;
   }
+}
+
+.modal-body {
+  padding: 0px 43px 28px 43px !important;
+  font-family: "Mulish", sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+
   p {
     margin-bottom: 18px;
   }

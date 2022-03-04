@@ -115,13 +115,17 @@ const Home = () => {
 
         {/* register-modal */}
         <Modal show={show} onHide={handleClose} size="lg">
-          <Modal.Header closeButton>
-            <Modal.Title></Modal.Title>
-          </Modal.Header>
-          <Modal.Body>
-            <h2>Register To Get QR Code Menu.</h2>
-            <p>Fill out the form to register and our team will contact you.</p>
-            <Form>
+          <Form>
+            <Modal.Header closeButton>
+              <h2>Register To Get QR Code Menu.</h2>
+              <Modal.Title></Modal.Title>
+            </Modal.Header>
+            <Modal.Body>
+              {/* <h2>Register To Get QR Code Menu.</h2> */}
+              <p>
+                Fill out the form to register and our team will contact you.
+              </p>
+
               <div className="mx-20">
                 <InputForm
                   label="Name"
@@ -177,8 +181,8 @@ const Home = () => {
               <button className="submit" onClick={handleClose}>
                 Submit{" "}
               </button>
-            </Form>
-          </Modal.Body>
+            </Modal.Body>
+          </Form>
         </Modal>
 
         {/*how-it-works section*/}

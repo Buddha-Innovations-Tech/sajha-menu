@@ -53,7 +53,8 @@ const Footer = () => {
                 </li>
                 <li className="mb-20">
                   <FaMapMarkerAlt className="icon mr-13" />
-                  Yogikuti 3, Rupandehi, Nepal
+                  {/* Yogikuti 3, */}
+                  Rupandehi, Nepal
                 </li>
               </ul>
             </Col>

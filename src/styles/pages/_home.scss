@@ -10,7 +10,7 @@
 
     &__content {
       // padding-top: 134px;
-      padding-top: 250px;
+      padding-top: 224px;
       position: relative;
 
       &--heading {
@@ -48,6 +48,7 @@
           position: absolute;
           height: 110px;
           bottom: -20%;
+          left: -2.5%;
           // margin-left: 35px;
         }
 
@@ -254,7 +255,8 @@
 
     .why-image {
       display: flex;
-      align-items: center;
+      // align-items: center;
+      align-items: self-end;
       padding: 0 0 0 50px;
       justify-content: center;
     }
@@ -408,6 +410,7 @@
         background: linear-gradient(0deg, #303030, #303030);
         border-radius: 15px;
         padding: 64.19px;
+        height: 93%;
 
         &-inner {
           background: #ffffff;
@@ -438,6 +441,11 @@
 @media (max-width: 1440px) and (min-width: 992px) {
   .home .how-it-works__procedure-box .qr-code {
     height: 353px;
+  }
+
+  .newsletter__wrapper-form.modal-body {
+    padding: 0 !important;
+    margin: 50px 0;
   }
 }
 
@@ -520,6 +528,12 @@
 }
 
 @media only screen and (max-width: 768px) {
+  .mr-3.col-md-4 {
+    margin: 10px 0 !important;
+    padding-right: calc(var(--bs-gutter-x) * 0.5) !important;
+    padding-left: calc(var(--bs-gutter-x) * 0.5) !important;
+  }
+
   .home .how-it-works__heading,
   .home .why-choose__heading,
   .home .common .where__heading {
@@ -536,7 +550,7 @@
   .why-choose {
     &__images {
       .why__card {
-        margin: 20px;
+        // margin: 20px;
       }
     }
   }
