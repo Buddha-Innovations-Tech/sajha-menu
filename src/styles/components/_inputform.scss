@@ -1,6 +1,6 @@
 .modal-body {
   padding: 28px 43px !important;
-  font-family: "Raleway", sans-serif;
+  font-family: "Mulish", sans-serif;
   font-weight: normal;
   font-size: 16px;
 
@@ -51,4 +51,20 @@
 
 .modal-dialog.modal-lg {
   width: 558px;
+}
+
+@media only screen and (max-width: 425px) {
+  .modal-dialog.modal-lg {
+    width: 400px;
+  }
+
+  .modal-body {
+    padding: 20px !important;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .modal-dialog.modal-lg {
+    width: 300px;
+  }
 }

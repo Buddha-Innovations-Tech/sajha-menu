@@ -1,16 +1,25 @@
 .why__card {
-  margin: 0 20px 20px 0;
+  height: 100%;
+  // margin: 0 20px 20px 0;
+  // padding: 20px;
   background: linear-gradient(0deg, #ffffff, #ffffff);
   box-shadow: 0px 0px 10px 2px rgba(229, 229, 229, 0.2);
   border-radius: 10px;
-  padding: 20px;
+  margin: 9px 9px;
 
+  display: block;
+  // padding: 20px;
+
+  &--img {
+    // padding: 20px 55px 0 55px;
+    padding: 20px 0 0 0;
+  }
   .content {
-    margin: 12px 0 0 0;
-    padding: 0 16px;
+    // margin: 12px 0 0 0;
+    padding: 12px 30px 20px 30px;
 
     span {
-      font-family: "Raleway", sans-serif;
+      font-family: "Mulish", sans-serif;
       font-weight: 500;
       font-style: normal;
       font-size: 16px;

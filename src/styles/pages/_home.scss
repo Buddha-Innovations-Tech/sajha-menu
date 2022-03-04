@@ -17,8 +17,8 @@
         h1 {
           font-size: 48px;
           line-height: 58px;
-          font-family: "Raleway", sans-serif;
-          font-weight: 800;
+          font-family: "Mulish", sans-serif;
+          font-weight: 900;
           margin-bottom: 0;
 
           // .bg {
@@ -54,7 +54,7 @@
         p {
           font-size: 18px;
           line-height: 27px;
-          font-family: "Raleway", sans-serif;
+          font-family: "Mulish", sans-serif;
           font-weight: 500;
           color: #303030;
           // margin-top: 44px;
@@ -86,8 +86,10 @@
       // top: 39%;
       // top: 19.3%;
       // top: 9.55%;
-      top: 30.5%;
-      left: 47%;
+      // top: 30.5%;
+      bottom: 0%;
+      right: 0%;
+
       img {
         width: 100%;
         height: 581px;
@@ -101,7 +103,7 @@
     text-align: center;
 
     &__heading {
-      font-family: "Raleway", sans-serif;
+      font-family: "Mulish", sans-serif;
       color: #303030;
       h2 {
         font-size: 36px;
@@ -150,8 +152,8 @@
 
           .title {
             margin-bottom: 16px;
-            font-family: "Raleway", sans-serif;
-            font-size: 19px;
+            font-family: "Mulish", sans-serif;
+            font-size: 18px;
             // font-size: 24px;
             font-weight: 700;
             line-height: 29px;
@@ -161,12 +163,11 @@
         }
 
         .content {
-          font-family: "Raleway", sans-serif;
+          font-family: "Mulish", sans-serif;
           font-weight: 500;
           font-size: 14px;
           line-height: 17px;
           text-align: center;
-
           color: #ffffff;
         }
 
@@ -222,7 +223,7 @@
     text-align: center;
 
     &__heading {
-      font-family: "Raleway", sans-serif;
+      font-family: "Mulish", sans-serif;
       color: #303030;
       h2 {
         font-size: 36px;
@@ -266,7 +267,7 @@
 
     .where {
       &__heading {
-        font-family: "Raleway", sans-serif;
+        font-family: "Mulish", sans-serif;
         color: #303030;
         h2 {
           font-size: 36px;
@@ -291,7 +292,12 @@
         justify-content: center;
         margin: 0 85px;
 
+        .image__wrapper:hover .overlap {
+          opacity: 1;
+        }
+
         .image__wrapper {
+          position: relative;
           .where-img {
             filter: gray;
             -webkit-filter: grayscale(1);
@@ -303,6 +309,21 @@
             -webkit-filter: grayscale(0);
             -webkit-transform: scale(1.08);
           }
+
+          .overlap {
+            position: absolute;
+            top: 50%;
+            left: 30%;
+            text-transform: uppercase;
+            opacity: 0;
+            color: #ffffff;
+            font-size: 20px;
+            font-weight: 800;
+          }
+
+          // .overlap:hover {
+          //   opacity: 1;
+          // }
         }
       }
     }
@@ -315,7 +336,7 @@
       border-radius: 15px;
 
       &__heading {
-        font-family: "Raleway", sans-serif;
+        font-family: "Mulish", sans-serif;
         color: #303030;
         h2 {
           font-size: 36px;
@@ -331,21 +352,21 @@
 
         .trusted-img {
           filter: gray;
-          -webkit-filter: grayscale(1);
+          filter: grayscale(1);
           transition: all 0.7s ease-in-out;
         }
 
         img:hover {
           filter: none;
-          -webkit-filter: grayscale(0);
-          -webkit-transform: scale(1.01);
+          filter: grayscale(0);
+          transform: scale(1.01);
         }
       }
     }
 
     .faq {
       &__heading {
-        font-family: "Raleway", sans-serif;
+        font-family: "Mulish", sans-serif;
         color: #303030;
         h2 {
           font-size: 36px;
@@ -410,7 +431,13 @@
 
 @media only screen and (max-width: 1440px) {
   .home .hero__illustration {
-    top: 27.5%;
+    // top: 27.5%;
+  }
+}
+
+@media (max-width: 1440px) and (min-width: 992px) {
+  .home .how-it-works__procedure-box .qr-code {
+    height: 353px;
   }
 }
 
@@ -420,7 +447,7 @@
   }
 
   .home .hero__illustration {
-    top: 27.5%;
+    // top: 27.5%;
   }
 
   .home .how-it-works__procedure-box .demos .image .user-demo {
@@ -434,7 +461,7 @@
   }
 
   .home .hero__illustration {
-    top: 32.5%;
+    // top: 32.5%;
   }
 }
 
@@ -443,7 +470,7 @@
     padding: 47px 68px;
   }
   .home .hero__illustration {
-    top: 32.3%;
+    // top: 32.3%;
   }
 
   .home .how-it-works__procedure-box .demos .title {
@@ -463,16 +490,32 @@
   }
 }
 @media only screen and (max-width: 1024px) {
+  .home .hero__content--para .line {
+    position: absolute;
+    height: 195px;
+    bottom: -23%;
+    left: -4%;
+  }
   .home .newsletter__wrapper-box-inner {
     padding: 47px 17px;
   }
   .home .hero__illustration {
-    top: 36.3%;
+    // top: 36.3%;
   }
 }
 @media only screen and (max-width: 992px) {
+  .home .hero__content--para .line {
+    position: absolute;
+    height: 124px;
+    left: 0;
+    top: -19px;
+  }
   .home .newsletter__wrapper-box-inner {
     padding: 46px 8px;
+  }
+
+  .home .why-choose .why-image {
+    margin: 30px 0;
   }
 }
 
@@ -511,6 +554,14 @@
 }
 
 @media only screen and (max-width: 576px) {
+  .home .hero__content {
+    padding-top: 150px;
+  }
+
+  .home .common .trusted-by__images {
+    padding: 0 80px;
+  }
+
   .home .newsletter__wrapper-both {
     padding: 52px 60px;
   }
@@ -539,6 +590,12 @@
     left: -6%;
   }
 
+  div#watch-video {
+    padding: 0 0 52px 0;
+  }
+  .home .how-it-works__procedure .p-52 {
+    padding: 52px 0;
+  }
   .home .common .where__images {
     margin: 0 24px;
   }

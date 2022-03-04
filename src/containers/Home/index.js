@@ -68,10 +68,7 @@ const Home = () => {
                         QR Code, View Menu
                         <span className="text-white"> and </span>
                         Place Order
-                        <span className="text-white">
-                          {" "}
-                          From <br /> Your Mobile.
-                        </span>
+                        <span className="text-white"> From Your Mobile. </span>
                       </div>
                     </h1>
                   </div>
@@ -277,36 +274,36 @@ const Home = () => {
               <Row className="gx-5">
                 <Col lg={8}>
                   <Row>
-                    <Col md={4}>
+                    <Col md={4} className="mr-3">
                       <WhyCard
                         imageSource={contactless}
                         content="Contactless Ordering"
                       />
                     </Col>
-                    <Col md={4}>
+                    <Col md={4} className="mr-3">
                       <WhyCard imageSource={noapp} content="No App Required" />
                     </Col>
-                    <Col md={4}>
+                    <Col md={4} className="mr-3">
                       <WhyCard
                         imageSource={fast}
                         content="Faster Table Turnover"
                       />
                     </Col>
                   </Row>
-                  <Row>
-                    <Col md={4}>
+                  <Row className="mt-3">
+                    <Col md={4} className="mr-2">
                       <WhyCard
                         imageSource={order}
                         content="Better Order Accuracy"
                       />
                     </Col>
-                    <Col md={4}>
+                    <Col md={4} className="mr-3">
                       <WhyCard
                         imageSource={productivity}
                         content="Boost Staff Productivity"
                       />
                     </Col>
-                    <Col md={4}>
+                    <Col md={4} className="mr-3">
                       <WhyCard
                         imageSource={care}
                         content="Keeps Customer Safe"
@@ -344,19 +341,24 @@ const Home = () => {
             <div className="where__images">
               <div className="image__wrapper">
                 <img src={one} alt="one" className="img-fluid where-img" />
+                <div className="overlap"> Hotel</div>
               </div>
               <div className="image__wrapper">
                 <img src={two} alt="one" className="img-fluid where-img" />
+                <div className="overlap">Cafe</div>
               </div>
               <div className="image__wrapper">
                 <img src={three} alt="one" className="img-fluid where-img" />
+                <div className="overlap">Restaurant</div>
               </div>
               <div className="image__wrapper">
                 <img src={four} alt="one" className="img-fluid where-img" />
                 {/* <img src={one} alt="one" className="img-fluid where-img" /> */}
+                <div className="overlap">Longue</div>
               </div>
               <div className="image__wrapper">
                 <img src={five} alt="one" className="img-fluid where-img" />
+                <div className="overlap">Bar</div>
               </div>
             </div>
           </section>
@@ -369,28 +371,28 @@ const Home = () => {
 
             <div className="trusted-by__images">
               <Row className="justify-content-center align-items-center">
-                <Col lg={3}>
+                <Col lg={3} className="mb-4 p-0">
                   <img
                     src={ovenfresh}
                     alt="one"
                     className="img-fluid trusted-img"
                   />
                 </Col>
-                <Col lg={3}>
+                <Col lg={3} className="mb-4 p-0">
                   <img
                     src={maharaja}
                     alt="one"
                     className="img-fluid trusted-img"
                   />
                 </Col>
-                <Col lg={3}>
+                <Col lg={3} className="mb-4 p-0">
                   <img
                     src={pauwa}
                     alt="one"
                     className="img-fluid trusted-img"
                   />
                 </Col>
-                <Col lg={3}>
+                <Col lg={3} className="mb-4 p-0">
                   <img
                     src={daddys}
                     alt="one"
@@ -399,24 +401,24 @@ const Home = () => {
                 </Col>
               </Row>
               <Row className="justify-content-center align-items-center">
-                <Col lg={3}>
+                <Col lg={3} className="mb-4 p-0">
                   <img src={kkfc} alt="one" className="img-fluid trusted-img" />
                 </Col>
-                <Col lg={3}>
+                <Col lg={3} className="mb-4 p-0">
                   <img
                     src={durbar}
                     alt="one"
                     className="img-fluid trusted-img"
                   />
                 </Col>
-                <Col lg={3}>
+                <Col lg={3} className="mb-4 p-0">
                   <img
                     src={concept}
                     alt="one"
                     className="img-fluid trusted-img"
                   />
                 </Col>
-                <Col lg={3}>
+                <Col lg={3} className="mb-4 p-0">
                   <img
                     src={darkwood}
                     alt="one"
