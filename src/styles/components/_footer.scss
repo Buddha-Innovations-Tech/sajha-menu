@@ -78,13 +78,17 @@
     }
 
     &--social-media {
-      // margin-left: 100px !important;
-      // margin-left: 0px !important;
       padding-right: 0px !important;
       padding-left: 0px !important;
 
       .icon {
         font-size: 30px;
+        cursor: pointer;
+      }
+
+      .icon:hover {
+        color: #ffb966;
+        background-color: transparent;
       }
     }
   }

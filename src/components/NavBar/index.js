@@ -16,7 +16,9 @@ const NavBar = () => {
               </div>
             </Link>
             <div className="connect">
-              <button className="connect__btn">Let’s Talk</button>
+              <a href="#newsletter">
+                <button className="connect__btn">Let’s Talk</button>
+              </a>
             </div>
           </div>
         </Container>

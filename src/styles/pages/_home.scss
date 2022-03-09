@@ -9,8 +9,8 @@
     position: relative;
 
     &__content {
-      // padding-top: 134px;
-      padding-top: 224px;
+      padding-top: 180px;
+      // padding-top: 224px;
       position: relative;
 
       &--heading {
@@ -67,11 +67,12 @@
       &--buttons {
         margin-top: 66px;
         // margin-bottom: 169px;
-        margin-bottom: 120px;
+        margin-bottom: 100px;
         display: inline-block;
         &-register {
           margin-right: 35px;
           @include btn(#303030);
+          // transition: all 0.5s ease-in-out;
         }
         &-watch {
           @include btn(transparent);
@@ -83,17 +84,13 @@
 
     &__illustration {
       position: absolute;
-      // top: 15%;
-      // top: 39%;
-      // top: 19.3%;
-      // top: 9.55%;
-      // top: 30.5%;
       bottom: 0%;
       right: 0%;
+      width: 55%;
 
       img {
         width: 100%;
-        height: 581px;
+        // height: 581px;
       }
     }
   }
@@ -309,7 +306,7 @@
           img:hover {
             filter: none;
             -webkit-filter: grayscale(0);
-            -webkit-transform: scale(1.08);
+            transform: scale(1.08);
           }
 
           .overlap {
@@ -355,7 +352,7 @@
         .trusted-img {
           filter: gray;
           filter: grayscale(1);
-          transition: all 0.7s ease-in-out;
+          transition: all 0.3s ease-in-out;
         }
 
         img:hover {
@@ -405,12 +402,45 @@
         // padding: 52px 0 52px 70px;
         margin: 0;
       }
+      &-right {
+        h2 {
+          font-size: 24px;
+          font-weight: bold;
+          margin-bottom: 6px;
+        }
+
+        p {
+          margin-bottom: 18px;
+        }
+        .mx-20 {
+          margin-bottom: 20px;
+
+          label.form-label {
+            margin-bottom: 4px;
+          }
+
+          input.form-control {
+            height: 44px;
+            border: 1px solid #a3a3a3;
+            border-radius: 5px;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            padding-left: 15px;
+          }
+        }
+
+        .submit {
+          @include btn(#303030);
+          width: 100%;
+          text-align: center;
+        }
+      }
 
       &-box {
         background: linear-gradient(0deg, #303030, #303030);
         border-radius: 15px;
         padding: 64.19px;
-        height: 93%;
+        height: 100%;
 
         &-inner {
           background: #ffffff;
@@ -432,9 +462,14 @@
   }
 }
 
-@media only screen and (max-width: 1440px) {
-  .home .hero__illustration {
-    // top: 27.5%;
+@media only screen and (max-width: 2000px) {
+  .home .how-it-works__procedure-box .qr-code {
+    height: 582px;
+  }
+  .home .newsletter__wrapper-box-inner {
+    img.img-fluid.demo {
+      height: 284px !important;
+    }
   }
 }
 
@@ -454,9 +489,9 @@
     padding: 47px 124px;
   }
 
-  .home .hero__illustration {
-    // top: 27.5%;
-  }
+  // .home .hero__illustration {
+  //   // top: 27.5%;
+  // }
 
   .home .how-it-works__procedure-box .demos .image .user-demo {
     margin-right: 48px;
@@ -468,18 +503,18 @@
     padding: 47px 92px;
   }
 
-  .home .hero__illustration {
-    // top: 32.5%;
-  }
+  // .home .hero__illustration {
+  //   // top: 32.5%;
+  // }
 }
 
 @media only screen and (max-width: 1200px) {
   .home .newsletter__wrapper-box-inner {
     padding: 47px 68px;
   }
-  .home .hero__illustration {
-    // top: 32.3%;
-  }
+  // .home .hero__illustration {
+  //   // top: 32.3%;
+  // }
 
   .home .how-it-works__procedure-box .demos .title {
     margin-bottom: 16px;
@@ -507,9 +542,9 @@
   .home .newsletter__wrapper-box-inner {
     padding: 47px 17px;
   }
-  .home .hero__illustration {
-    // top: 36.3%;
-  }
+  // .home .hero__illustration {
+  //   // top: 36.3%;
+  // }
 }
 @media only screen and (max-width: 992px) {
   .home .hero__content--para .line {
@@ -528,6 +563,15 @@
 }
 
 @media only screen and (max-width: 768px) {
+  .home .common .where__images .image__wrapper .overlap {
+    font-size: 15px;
+    left: 0%;
+  }
+  .home .hero__content--para .line {
+    left: -17px;
+    top: -19px;
+  }
+
   .mr-3.col-md-4 {
     margin: 10px 0 !important;
     padding-right: calc(var(--bs-gutter-x) * 0.5) !important;
@@ -546,14 +590,16 @@
   .home .how-it-works__procedure .p-52 {
     padding: 52px 52px 52px 52px;
   }
-
-  .why-choose {
-    &__images {
-      .why__card {
-        // margin: 20px;
-      }
-    }
+  .home .how-it-works__procedure-box .qr-code {
+    height: auto;
   }
+  // .why-choose {
+  //   &__images {
+  //     .why__card {
+  //       // margin: 20px;
+  //     }
+  //   }
+  // }
 
   .home .newsletter__wrapper-box-inner {
     padding: 50px 40px;

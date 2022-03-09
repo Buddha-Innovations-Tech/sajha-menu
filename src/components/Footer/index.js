@@ -54,16 +54,16 @@ const Footer = () => {
                 <li className="mb-20">
                   <FaMapMarkerAlt className="icon mr-13" />
                   {/* Yogikuti 3, */}
-                  Rupandehi, Nepal
+                  Yogikuti,Rupandehi, Nepal
                 </li>
               </ul>
             </Col>
             <Col lg={2} className="footer__blocks footer__blocks--social-media">
               <h5 className="footer__blocks--header mb-30">Social Media</h5>
               <p className="footer__blocks--content">
-                <FaFacebook className="icon mr-13" />
-                <AiFillTwitterCircle className="icon mr-13" />
-                <AiFillGoogleCircle className="icon" />
+                <FaFacebook className="icon mr-13 fb" />
+                <AiFillTwitterCircle className="icon mr-13 twi" />
+                <AiFillGoogleCircle className="icon google" />
               </p>
             </Col>
           </Row>

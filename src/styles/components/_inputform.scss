@@ -1,20 +1,27 @@
-.modal-header {
-  border: none !important;
-  padding: 28px 43px 6px 43px !important;
+.register-form {
+  // width: 50%;
+  position: absolute;
+  right: 0%;
+  // bottom: 0%;
+  top: 129px;
+  // width: 558px;
+  padding: 28px 43px;
+  font-family: "Mulish", sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  background-color: #fff;
+  margin-right: 85px;
+  transition: all 8s ease-in-out;
+
+  .icon {
+    cursor: pointer;
+  }
 
   h2 {
-    font-family: "Mulish", sans-serif;
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 6px;
   }
-}
-
-.modal-body {
-  padding: 0px 43px 28px 43px !important;
-  font-family: "Mulish", sans-serif;
-  font-weight: normal;
-  font-size: 16px;
 
   p {
     margin-bottom: 18px;
@@ -53,25 +60,5 @@
     @include btn(#303030);
     width: 100%;
     text-align: center;
-  }
-}
-
-.modal-dialog.modal-lg {
-  width: 558px;
-}
-
-@media only screen and (max-width: 425px) {
-  .modal-dialog.modal-lg {
-    width: 400px;
-  }
-
-  .modal-body {
-    padding: 20px !important;
-  }
-}
-
-@media only screen and (max-width: 375px) {
-  .modal-dialog.modal-lg {
-    width: 300px;
   }
 }

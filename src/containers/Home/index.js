@@ -1,6 +1,9 @@
-import { Col, Row, Container, Button, Form } from "react-bootstrap";
-import Modal from "react-bootstrap/Modal";
-import React, { useState } from "react";
+import { Col, Row, Container, Form } from "react-bootstrap";
+import { ImCross } from "react-icons/im";
+// import Modal from "react-bootstrap/Modal";
+import React from "react";
+import Fade from "react-reveal/Fade";
+import Slide from "react-reveal/Slide";
 
 import AccordinComp from "../../components/AccordinComp";
 import InputForm from "../../components/InputForm";
@@ -40,10 +43,21 @@ import concept from "../../assets/images/image-ovenfresh.png";
 import ovenfresh from "../../assets/images/image-lavish.png";
 
 const Home = () => {
-  const [show, setShow] = useState(false);
+  // const [show, setShow] = useState(false);
 
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+  // const handleClose = () => setShow(false);
+  // const handleShow = () => setShow(true);
+
+  const register = () => {
+    document.getElementById("one").style.display = "none";
+    document.getElementById("two").style.display = "block";
+  };
+
+  const closeForm = () => {
+    document.getElementById("two").style.display = "none";
+    document.getElementById("one").style.display = "block";
+  };
+
   return (
     <>
       <section className="home">
@@ -56,137 +70,157 @@ const Home = () => {
             <Row>
               <Col lg={6}>
                 <div className="hero__content">
-                  <div className="hero__content--heading">
-                    <h1>
-                      {/* <img
+                  <Slide left>
+                    <div className="hero__content--heading">
+                      <h1>
+                        {/* <img
                         src={acb}
                         alt="hero__bg-image"
                         className="img-fluid imgg"
                       /> */}
-                      <div className="bg">
-                        <span className="text-white"> Scan </span>
-                        QR Code, View Menu
-                        <span className="text-white"> and </span>
-                        Place Order
-                        <span className="text-white"> From Your Mobile. </span>
-                      </div>
-                    </h1>
-                  </div>
-                  <div className="hero__content--para">
-                    <img
-                      src={line}
-                      alt="hero__bg-image"
-                      className="img-fluid line"
-                    />
-                    <p>
-                      Grow Your Restaurant Business Using Our Sajha Menu that{" "}
-                      <br />
-                      connects your customers Touchless and keeps everyone{" "}
-                      <br />
-                      safe in this pandemic situation.
-                    </p>
-                  </div>
-                  <div className="hero__content--buttons">
-                    <button
-                      className="hero__content--buttons-register"
-                      onClick={handleShow}
-                    >
-                      Register Now
-                    </button>
-                    <a href="#watch-video">
-                      <button className="hero__content--buttons-watch">
-                        Watch Video
+                        <div className="bg">
+                          <span className="text-white"> Scan </span>
+                          QR Code, View Menu
+                          <span className="text-white"> and </span>
+                          Place Order
+                          <span className="text-white">
+                            {" "}
+                            From Your Mobile.{" "}
+                          </span>
+                        </div>
+                      </h1>
+                    </div>
+                    <div className="hero__content--para">
+                      <img
+                        src={line}
+                        alt="hero__bg-image"
+                        className="img-fluid line"
+                      />
+                      <p>
+                        Grow Your Restaurant Business Using Our Sajha Menu that{" "}
+                        <br />
+                        connects your customers Touchless and keeps everyone{" "}
+                        <br />
+                        safe in this pandemic situation.
+                      </p>
+                    </div>
+
+                    <div className="hero__content--buttons">
+                      <button
+                        className="hero__content--buttons-register"
+                        onClick={register}
+                      >
+                        Register Now
                       </button>
-                    </a>
-                  </div>
+                      <a href="#watch-video">
+                        <button className="hero__content--buttons-watch">
+                          Watch Video
+                        </button>
+                      </a>
+                    </div>
+                  </Slide>
                 </div>
               </Col>
               <Col lg={6}></Col>
             </Row>
-            <div className="hero__illustration">
-              <img
-                src={Illustration}
-                alt="illustration"
-                className="img-fluid"
-              />
-            </div>
+            <Slide right>
+              <div className="hero__illustration" id="one">
+                <img
+                  src={Illustration}
+                  alt="illustration"
+                  className="img-fluid"
+                />
+              </div>
+            </Slide>
+
+            {/* register-form */}
+            <Fade right>
+              <div
+                className="register-form"
+                id="two"
+                style={{ display: "none" }}
+              >
+                <div className="d-flex justify-content-between">
+                  <h2>Register To Get QR Code Menu.</h2>
+                  <ImCross onClick={closeForm} className="icon" />
+                </div>
+                <p>
+                  Fill out the form to register and our team will contact you.
+                </p>
+                <Form>
+                  <div className="mx-20">
+                    <InputForm
+                      label="Name"
+                      type="text"
+                      placeholder="Enter Your Full Name"
+                      name="name"
+                      asteric="*"
+                      required
+                    />
+                  </div>
+                  <div className="mx-20">
+                    <InputForm
+                      label="Email"
+                      type="email"
+                      placeholder="Enter Your Email Address(Optional)"
+                      name="email"
+                    />
+                  </div>
+
+                  {/* business type */}
+                  <div className="mx-20 d-flex justify-content-between">
+                    <div style={{ width: "48%" }}>
+                      <Form.Label>Business Type</Form.Label>
+                      <div className="custom-select">
+                        <select>
+                          <option value="0">Select </option>
+                          <option value="1">Audi</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div style={{ width: "50%" }}>
+                      <InputForm
+                        label="Phone Number"
+                        type="number"
+                        placeholder="Enter Your Phone Number"
+                        name="mobilenumber"
+                        asteric="*"
+                        required
+                      />
+                    </div>
+                  </div>
+
+                  <div className="mx-20">
+                    <InputForm
+                      label="Company Name"
+                      type="text"
+                      placeholder="Enter Your Company Name"
+                      name="company"
+                      asteric="*"
+                      required
+                    />
+                  </div>
+
+                  {/* <div className="mx-20">
+                    <InputForm
+                      label="Phone Number"
+                      type="number"
+                      placeholder="Enter Your Phone Number"
+                      name="mobilenumber"
+                      asteric="*"
+                      required
+                    />
+                  </div> */}
+
+                  <button className="submit">Submit</button>
+                </Form>
+              </div>
+            </Fade>
           </Container>
         </section>
 
-        {/* register-modal */}
-        <Modal show={show} onHide={handleClose} size="lg">
-          <Form>
-            <Modal.Header closeButton>
-              <h2>Register To Get QR Code Menu.</h2>
-              <Modal.Title></Modal.Title>
-            </Modal.Header>
-            <Modal.Body>
-              {/* <h2>Register To Get QR Code Menu.</h2> */}
-              <p>
-                Fill out the form to register and our team will contact you.
-              </p>
-
-              <div className="mx-20">
-                <InputForm
-                  label="Name"
-                  type="text"
-                  placeholder="Enter Your Full Name"
-                  name="name"
-                  asteric="*"
-                  required
-                />
-              </div>
-              <div className="mx-20">
-                <InputForm
-                  label="Email"
-                  type="email"
-                  placeholder="Enter Your Email Address(Optional)"
-                  name="email"
-                />
-              </div>
-
-              {/* business type */}
-              <div className="mx-20">
-                <Form.Label>Business Type</Form.Label>
-                <div className="custom-select">
-                  <select>
-                    <option value="0">Select </option>
-                    <option value="1">Audi</option>
-                  </select>
-                </div>
-              </div>
-
-              <div className="mx-20">
-                <InputForm
-                  label="Company Name"
-                  type="text"
-                  placeholder="Enter Your Company Name"
-                  name="company"
-                  asteric="*"
-                  required
-                />
-              </div>
-
-              <div className="mx-20">
-                <InputForm
-                  label="Phone Number"
-                  type="number"
-                  placeholder="Enter Your Phone Number"
-                  name="mobilenumber"
-                  asteric="*"
-                  required
-                />
-              </div>
-
-              <button className="submit" onClick={handleClose}>
-                Submit{" "}
-              </button>
-            </Modal.Body>
-          </Form>
-        </Modal>
-
         {/*how-it-works section*/}
-        <section className="how-it-works">
+        <section className="how-it-works" id="watch-video">
           <div className="how-it-works__heading">
             <h2>How Does Sajha Menu Work ?</h2>
             <p>
@@ -199,7 +233,7 @@ const Home = () => {
           <Row>
             <Col lg={2}></Col>
             <Col lg={8}>
-              <div className="how-it-works__procedure ">
+              <div className="how-it-works__procedure">
                 <Row>
                   <Col lg={6}>
                     <div className="how-it-works__procedure-box p-52">
@@ -219,11 +253,9 @@ const Home = () => {
                       </div>
                     </div>
                   </Col>
+
                   <Col lg={6}>
-                    <div
-                      className="how-it-works__procedure-box box-2 p-52"
-                      id="watch-video"
-                    >
+                    <div className="how-it-works__procedure-box box-2 p-52">
                       <div className="qr-code demos">
                         <div className="title">
                           <div className="user">User Phone</div>
@@ -276,6 +308,7 @@ const Home = () => {
             <Col lg={2}></Col>
             <Col lg={8}>
               <Row className="gx-5">
+                {/* <Fade left> */}
                 <Col lg={8}>
                   <Row>
                     <Col md={4} className="mr-3">
@@ -284,9 +317,11 @@ const Home = () => {
                         content="Contactless Ordering"
                       />
                     </Col>
+
                     <Col md={4} className="mr-3">
                       <WhyCard imageSource={noapp} content="No App Required" />
                     </Col>
+
                     <Col md={4} className="mr-3">
                       <WhyCard
                         imageSource={fast}
@@ -315,9 +350,12 @@ const Home = () => {
                     </Col>
                   </Row>
                 </Col>
+                {/* </Fade> */}
+
                 <Col lg={4} className="why-image">
                   <img
                     src={sajha}
+                    style={{ height: "283px", maxWidth: "315px" }}
                     alt="why-choose-sajha-menu"
                     className="img-fluid"
                   />
@@ -331,6 +369,7 @@ const Home = () => {
         {/* three sections - where, trusted-by, faqs */}
         <div className="common">
           {/* where */}
+
           <section className="where">
             <div className="where__heading">
               <h2>Where Sajha Menu Can Be Applied ?</h2>
@@ -343,37 +382,43 @@ const Home = () => {
             </div>
 
             <div className="where__images">
-              <div className="image__wrapper">
-                <img src={one} alt="one" className="img-fluid where-img" />
-                <div className="overlap"> Hotel</div>
-              </div>
-              <div className="image__wrapper">
-                <img src={two} alt="one" className="img-fluid where-img" />
-                <div className="overlap">Cafe</div>
-              </div>
+              <Fade left>
+                <div className="image__wrapper">
+                  <img src={one} alt="one" className="img-fluid where-img" />
+                  <div className="overlap"> Hotel</div>
+                </div>
+                <div className="image__wrapper">
+                  <img src={two} alt="one" className="img-fluid where-img" />
+                  <div className="overlap">Cafe</div>
+                </div>
+              </Fade>
               <div className="image__wrapper">
                 <img src={three} alt="one" className="img-fluid where-img" />
                 <div className="overlap">Restaurant</div>
               </div>
-              <div className="image__wrapper">
-                <img src={four} alt="one" className="img-fluid where-img" />
-                {/* <img src={one} alt="one" className="img-fluid where-img" /> */}
-                <div className="overlap">Longue</div>
-              </div>
-              <div className="image__wrapper">
-                <img src={five} alt="one" className="img-fluid where-img" />
-                <div className="overlap">Bar</div>
-              </div>
+              <Fade right>
+                <div className="image__wrapper">
+                  <img src={four} alt="one" className="img-fluid where-img" />
+                  {/* <img src={one} alt="one" className="img-fluid where-img" /> */}
+                  <div className="overlap">Longue</div>
+                </div>
+                <div className="image__wrapper">
+                  <img src={five} alt="one" className="img-fluid where-img" />
+                  <div className="overlap">Bar</div>
+                </div>
+              </Fade>
             </div>
           </section>
 
           {/* trusted-by */}
+
           <section className="trusted-by">
             <div className="trusted-by__heading">
               <h2>Trusted by </h2>
             </div>
 
             <div className="trusted-by__images">
+              {/* <Slide left> */}
               <Row className="justify-content-center align-items-center">
                 <Col lg={3} className="mb-4 p-0">
                   <img
@@ -404,6 +449,9 @@ const Home = () => {
                   />
                 </Col>
               </Row>
+              {/* </Slide> */}
+
+              {/* <Slide right> */}
               <Row className="justify-content-center align-items-center">
                 <Col lg={3} className="mb-4 p-0">
                   <img src={kkfc} alt="one" className="img-fluid trusted-img" />
@@ -430,6 +478,7 @@ const Home = () => {
                   />
                 </Col>
               </Row>
+              {/* </Slide> */}
             </div>
           </section>
 
@@ -438,76 +487,95 @@ const Home = () => {
             <div className="faq__heading">
               <h2>Frequently Asked Questions</h2>
             </div>
+
             <div className="faq__qna">
-              <AccordinComp
-                header="1. How to create a QR code menu?"
-                body=" Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+              <Slide bottom>
+                <AccordinComp
+                  header="1. How to create a QR code menu?"
+                  body=" Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
             tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
             veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
             commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
             velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
             cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
             est laborum."
-              />
+                />
+              </Slide>
 
-              <AccordinComp
-                header="2. How to create a QR code menu?"
-                body=" Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+              <Slide bottom>
+                <AccordinComp
+                  header="2. How to create a QR code menu?"
+                  body=" Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
             tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
             veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
             commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
             velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
             cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
             est laborum."
-              />
+                />
+              </Slide>
 
-              <AccordinComp
-                header="3.  How can I check orders from my clients?"
-                body=" Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+              <Slide bottom>
+                <AccordinComp
+                  header="3.  How can I check orders from my clients?"
+                  body=" Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
             tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
             veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
             commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
             velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
             cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
             est laborum."
-              />
-              <AccordinComp
-                header="4. How will I receive orders?"
-                body=" Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                />
+              </Slide>
+
+              <Slide bottom>
+                <AccordinComp
+                  header="4. How will I receive orders?"
+                  body=" Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
             tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
             veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
             commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
             velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
             cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
             est laborum."
-              />
-              <AccordinComp
-                header="5. How will I receive orders?"
-                body=" Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                />
+              </Slide>
+
+              <Slide bottom>
+                <AccordinComp
+                  header="5. How will I receive orders?"
+                  body=" Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
             tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
             veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
             commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
             velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
             cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
             est laborum."
-              />
+                />
+              </Slide>
             </div>
           </section>
         </div>
 
         {/*  newsletter-section*/}
-        <section className="newsletter">
+        <section className="newsletter" id="newsletter">
           <div className="newsletter__wrapper">
             <Row className="newsletter__wrapper-both">
               <Col lg={6} className="newsletter__wrapper-left">
                 <div className="newsletter__wrapper-box">
                   <div className="newsletter__wrapper-box-inner">
-                    <img src={demo} alt="user-demo" className="img-fluid" />
+                    <img
+                      src={demo}
+                      style={{ height: "284px" }}
+                      alt="user-demo"
+                      className="img-fluid demo"
+                    />
                   </div>
                 </div>
               </Col>
+
               <Col lg={6} className="newsletter__wrapper-right">
-                <div className="newsletter__wrapper-form modal-body">
+                <div className="newsletter__wrapper-form">
                   <h2>Register To Get QR Code Menu.</h2>
                   <p>
                     Fill out the form to register and our team will contact you.
