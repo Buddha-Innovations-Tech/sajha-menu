@@ -41,6 +41,7 @@ import kkfc from "../../assets/images/image-kkfc.png";
 import pauwa from "../../assets/images/image-pauwa.png";
 import concept from "../../assets/images/image-ovenfresh.png";
 import ovenfresh from "../../assets/images/image-lavish.png";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   // const [show, setShow] = useState(false);
@@ -238,14 +239,16 @@ const Home = () => {
                   <Col lg={6}>
                     <div className="how-it-works__procedure-box p-52">
                       <div className="qr-code">
-                        <div className="title">Try Sajha Menu</div>
-                        <div className="image">
-                          <img
-                            src={qrcode}
-                            alt="qr-code"
-                            className="img-fluid"
-                          />
-                        </div>
+                        <Link to="/download">
+                          <div className="title">Try Sajha Menu</div>
+                          <div className="image">
+                            <img
+                              src={qrcode}
+                              alt="qr-code"
+                              className="img-fluid"
+                            />
+                          </div>
+                        </Link>
                       </div>
                       <div className="content pt-24">
                         Scan QR code from your phone to see a <br />

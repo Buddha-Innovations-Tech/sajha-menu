@@ -16,7 +16,7 @@ const Download = () => {
                 color: "white",
                 fontSize: "20px",
               }}
-              href="/sharesignal.apk"
+              href="/admin.apk"
             >
               Download Sajha Menu
             </a>
@@ -32,7 +32,7 @@ const Download = () => {
                 color: "white",
                 fontSize: "20px",
               }}
-              href="/sharesignal.apk"
+              href="/waiter.apk"
             >
               Download Waiter Menu
             </a>
