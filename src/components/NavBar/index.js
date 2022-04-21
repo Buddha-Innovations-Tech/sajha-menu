@@ -10,11 +10,11 @@ const NavBar = () => {
       <section className="nav">
         <Container>
           <div className="d-flex justify-content-between">
-            <Link to="/">
+            <a href="#home">
               <div className="logo">
                 <img src={Logo} alt="logo" className="img-fluid" />
               </div>
-            </Link>
+            </a>
             <div className="connect">
               <a href="#newsletter">
                 <button className="connect__btn">Let’s Talk</button>

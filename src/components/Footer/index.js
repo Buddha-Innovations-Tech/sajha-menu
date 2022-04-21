@@ -6,7 +6,9 @@ import {
   FaFacebook,
   FaTwitter,
 } from "react-icons/fa";
-import { AiFillTwitterCircle, AiFillGoogleCircle } from "react-icons/ai";
+// import { BsFacebook } from "react-icons/bs";
+import { AiFillTwitterCircle, AiFillInstagram } from "react-icons/ai";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -14,7 +16,12 @@ const Footer = () => {
       <footer className="footer">
         <Container>
           <Row className="footer-one">
-            <Col lg={3} className="footer__blocks footer__blocks--about">
+            <Col
+              lg={4}
+              xl={4}
+              xxl={4}
+              className="footer__blocks footer__blocks--about"
+            >
               <h5 className="footer__blocks--header mb-30">About Sajha Menu</h5>
               <p className="footer__blocks--content">
                 Sajha Menu has one primary objective that is to upsell your food
@@ -23,7 +30,12 @@ const Footer = () => {
                 guests engaged and ordering more .
               </p>
             </Col>
-            <Col lg={3} className="footer__blocks footer__blocks--quick-links">
+            <Col
+              lg={3}
+              xl={3}
+              xxl={3}
+              className="footer__blocks footer__blocks--quick-links second-footer"
+            >
               <h5 className="footer__blocks--header mb-30">Quick Links </h5>
               <ul className="clearfix footer__blocks--content">
                 <li className="mb-10">
@@ -37,7 +49,12 @@ const Footer = () => {
                 </li>
               </ul>
             </Col>
-            <Col lg={3} className="footer__blocks footer__blocks--contact">
+            <Col
+              lg={3}
+              xl={3}
+              xxl={3}
+              className="footer__blocks footer__blocks--contact"
+            >
               <h5 className="footer__blocks--header mb-30">
                 Contact Information
               </h5>
@@ -58,13 +75,25 @@ const Footer = () => {
                 </li>
               </ul>
             </Col>
-            <Col lg={2} className="footer__blocks footer__blocks--social-media">
+            <Col
+              lg={2}
+              xl={2}
+              xxl={2}
+              className="footer__blocks footer__blocks--social-media "
+            >
               <h5 className="footer__blocks--header mb-30">Social Media</h5>
-              <p className="footer__blocks--content">
-                <FaFacebook className="icon mr-13 fb" />
-                <AiFillTwitterCircle className="icon mr-13 twi" />
-                <AiFillGoogleCircle className="icon google" />
-              </p>
+              {/* <p className="footer__blocks--content"> */}
+              <a href="https://www.facebook.com/sajhamenu">
+                <FaFacebook className="icon fbicon" />
+              </a>
+              <a href="https://twitter.com/sajhamenu">
+                <AiFillTwitterCircle className="icon " />
+              </a>
+              <a href="https://www.instagram.com/sajhamenu">
+                <AiFillInstagram className="icon " />
+              </a>
+
+              {/* </p> */}
             </Col>
           </Row>
 

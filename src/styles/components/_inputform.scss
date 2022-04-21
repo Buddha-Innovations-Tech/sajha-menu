@@ -1,17 +1,14 @@
 .register-form {
-  // width: 50%;
   position: absolute;
   right: 0%;
-  // bottom: 0%;
-  top: 129px;
-  // width: 558px;
+  top: 0;
   padding: 28px 43px;
   font-family: "Mulish", sans-serif;
   font-weight: normal;
   font-size: 16px;
   background-color: #fff;
-  margin-right: 85px;
-  transition: all 8s ease-in-out;
+  margin-right: 0;
+  transition: all 4s ease-in-out;
 
   .icon {
     cursor: pointer;
@@ -60,5 +57,13 @@
     @include btn(#303030);
     width: 100%;
     text-align: center;
+  }
+}
+@media only screen and (max-width: 420px) {
+  .register-form{
+    margin-right: 0;
+    .icon{
+      margin-left: 20px;
+    }
   }
 }
