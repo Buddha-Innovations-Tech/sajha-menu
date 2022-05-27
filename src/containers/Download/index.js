@@ -1,3 +1,4 @@
+import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 
 const Download = () => {
@@ -16,7 +17,7 @@ const Download = () => {
                 color: "white",
                 fontSize: "20px",
               }}
-              href="/admin.apk"
+              href="https://backend.sajhamenu.com/uploads/admin.apk"
             >
               Download Sajha Menu
             </a>
@@ -32,9 +33,10 @@ const Download = () => {
                 color: "white",
                 fontSize: "20px",
               }}
-              href="/waiter.apk"
+              href="https://backend.sajhamenu.com/uploads/waiter.apk"
+              download
             >
-              Download Waiter Menu
+              Download Waiter App
             </a>
           </Col>
           <Col md={2}></Col>
