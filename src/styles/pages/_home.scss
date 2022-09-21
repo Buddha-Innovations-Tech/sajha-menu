@@ -12,6 +12,9 @@
       padding-top: 180px;
       // padding-top: 224px;
       position: relative;
+      @include responsive-for(xlg) {
+        padding-top: 110px;
+      }
 
       &--heading {
         h1 {
@@ -43,6 +46,9 @@
         display: flex;
         align-items: center;
         margin-top: 44px;
+        @include responsive-for(xlg) {
+          margin-top: 16px;
+        }
 
         .line {
           position: absolute;
@@ -69,6 +75,9 @@
         // margin-bottom: 169px;
         margin-bottom: 100px;
         display: inline-block;
+        @include responsive-for(xlg) {
+          margin-top: 16px;
+        }
         &-register {
           margin-right: 35px;
           @include btn(#303030);
@@ -87,6 +96,9 @@
       bottom: 0%;
       right: 0%;
       width: 55%;
+      @include responsive-for(xlg) {
+        width: 50%;
+      }
 
       img {
         width: 100%;
@@ -585,8 +597,16 @@
     padding: 0 45px;
   }
 
-  .home .hero__illustration {
-    display: none;
+  // .home .hero__illustration {
+  //   display: none;
+  // }
+
+  .hero__illustration {
+    img {
+      @include responsive-for(sm) {
+        display: none;
+      }
+    }
   }
   .home .how-it-works__procedure .p-52 {
     padding: 52px 52px 52px 52px;
@@ -690,5 +710,13 @@
   .home .hero__content--buttons-watch {
     padding: 15px 30px;
     margin: 15px 0;
+  }
+}
+
+.howpara {
+  margin: 0 auto;
+  width: 50%;
+  @include responsive-for(md) {
+    width: 100%;
   }
 }

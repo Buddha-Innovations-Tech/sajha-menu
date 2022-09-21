@@ -1,17 +1,22 @@
 .register-form {
   // width: 50%;
   position: absolute;
-  right: 0%;
+  right: 5%;
+
   // bottom: 0%;
   top: 129px;
   // width: 558px;
   padding: 28px 43px;
-  font-family: "Mulish", sans-serif;
+  font-family: 'Mulish', sans-serif;
   font-weight: normal;
   font-size: 16px;
   background-color: #fff;
-  margin-right: 85px;
+  // margin-right: 85px;
   transition: all 8s ease-in-out;
+  @include responsive-for(md) {
+    right: 0%;
+    margin: 0.5rem;
+  }
 
   .icon {
     cursor: pointer;

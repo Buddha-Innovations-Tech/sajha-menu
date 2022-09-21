@@ -169,26 +169,36 @@ const Home = () => {
                   </div>
 
                   {/* business type */}
-                  <div className='mx-20 d-flex justify-content-between'>
-                    <div style={{ width: '48%' }}>
-                      <Form.Label>Business Type</Form.Label>
-                      <div className='custom-select'>
-                        <select>
-                          <option value='0'>Select </option>
-                          <option value='1'>Audi</option>
-                        </select>
-                      </div>
-                    </div>
-                    <div style={{ width: '50%' }}>
-                      <InputForm
-                        label='Phone Number'
-                        type='number'
-                        placeholder='Enter Your Phone Number'
-                        name='mobilenumber'
-                        asteric='*'
-                        required
-                      />
-                    </div>
+
+                  <div className='mx-20  '>
+                    <Row>
+                      <Col md={6} sm={12}>
+                        <div>
+                          <Form.Label>Business Type</Form.Label>
+                          <div className='custom-select'>
+                            <select>
+                              <option value='0'>Select </option>
+                              <option value='1'>Restaurant</option>
+                              <option value='2'>cafe</option>
+                              <option value='3'>Hotel</option>
+                              <option value='4'>Bakery</option>
+                            </select>
+                          </div>
+                        </div>
+                      </Col>
+                      <Col md={6} sm={12}>
+                        <div>
+                          <InputForm
+                            label='Phone Number'
+                            type='text'
+                            placeholder='Enter Your Phone Number'
+                            name='mobilenumber'
+                            asteric='*'
+                            required
+                          />
+                        </div>
+                      </Col>
+                    </Row>
                   </div>
 
                   <div className='mx-20'>
@@ -224,10 +234,13 @@ const Home = () => {
         <section className='how-it-works' id='watch-video'>
           <div className='how-it-works__heading'>
             <h2>How Does Sajha Menu Work ?</h2>
-            <p>
-              Its simple as 1-2-3. The client comes, scans his mobile to see
-              your menu and the <br /> staff takes the order. No POS or Payment
-              gateways integration required.
+            <p className='howpara'>
+              QR codes on the restaurant tables are scanned by a customer. After
+              that the restaurant’s menu can be browsed is customers phone from
+              where they can order any food item they like. The waiter gets the
+              notification on his/her tab and confirms the order. Finally the
+              order is printerd in the kitchen and served to the customer. Quick
+              and Easy !!
             </p>
           </div>
 
@@ -295,78 +308,70 @@ const Home = () => {
         </section>
 
         {/* why-choose section */}
+
         <section className='why-choose'>
-          <div className='why-choose__heading'>
-            <h2>Why Choose Sajha Menu ?</h2>
-            <p>
-              The pandemic has shaped and accelerated the contactless menu for
-              ordering. Sajha Menu is a simplistic <br /> tool for restaurants,
-              cafes, bars, hotels and shops that creates digital contactless
-              menus. It avoids social <br /> distance and provides your guests
-              with a safe food ordering experience.
-            </p>
-          </div>
+          <Container>
+            <div className='why-choose__heading'>
+              <h2>Why Choose Sajha Menu ?</h2>
+              <p className='howpara'>
+                Sajhamenu is a quick QR Code based food Ordering System that can
+                be managed by a restaurant owner by generating a QR code
+                scannable menu on the tables. This allows their customers to
+                scan the QR code, browse the restaurant’s menu and order their
+                desired items from their smartphones.
+              </p>
+            </div>
 
-          <Row className='why-choose__images'>
-            <Col lg={2}></Col>
-            <Col lg={8}>
-              <Row className='gx-5'>
-                {/* <Fade left> */}
-                <Col lg={8}>
-                  <Row>
-                    <Col md={4} className='mr-3'>
-                      <WhyCard
-                        imageSource={contactless}
-                        content='Contactless Ordering'
-                      />
-                    </Col>
+            <Row className='why-choose__images'>
+              <Col md={12} lg={8}>
+                <Row>
+                  <Col md={4} className='mr-3'>
+                    <WhyCard
+                      imageSource={contactless}
+                      content='Contactless Ordering'
+                    />
+                  </Col>
 
-                    <Col md={4} className='mr-3'>
-                      <WhyCard imageSource={noapp} content='No App Required' />
-                    </Col>
+                  <Col md={4} className='mr-3'>
+                    <WhyCard imageSource={noapp} content='No App Required' />
+                  </Col>
 
-                    <Col md={4} className='mr-3'>
-                      <WhyCard
-                        imageSource={fast}
-                        content='Faster Table Turnover'
-                      />
-                    </Col>
-                  </Row>
-                  <Row className='mt-3'>
-                    <Col md={4} className='mr-2'>
-                      <WhyCard
-                        imageSource={order}
-                        content='Better Order Accuracy'
-                      />
-                    </Col>
-                    <Col md={4} className='mr-3'>
-                      <WhyCard
-                        imageSource={productivity}
-                        content='Boost Staff Productivity'
-                      />
-                    </Col>
-                    <Col md={4} className='mr-3'>
-                      <WhyCard
-                        imageSource={care}
-                        content='Keeps Customer Safe'
-                      />
-                    </Col>
-                  </Row>
-                </Col>
+                  <Col md={4} className='mr-3'>
+                    <WhyCard
+                      imageSource={fast}
+                      content='Faster Table Turnover'
+                    />
+                  </Col>
+
+                  <Col md={4} className='mr-2'>
+                    <WhyCard
+                      imageSource={order}
+                      content='Better Order Accuracy'
+                    />
+                  </Col>
+                  <Col md={4} className='mr-3'>
+                    <WhyCard
+                      imageSource={productivity}
+                      content='Boost Staff Productivity'
+                    />
+                  </Col>
+                  <Col md={4} className='mr-3'>
+                    <WhyCard imageSource={care} content='Keeps Customer Safe' />
+                  </Col>
+                </Row>
+
                 {/* </Fade> */}
-
-                <Col lg={4} className='why-image'>
-                  <img
-                    src={sajha}
-                    style={{ height: '283px', maxWidth: '315px' }}
-                    alt='why-choose-sajha-menu'
-                    className='img-fluid'
-                  />
-                </Col>
-              </Row>
-            </Col>
-            <Col lg={2}></Col>
-          </Row>
+              </Col>
+              <Col lg={4} md={12} className='why-image'>
+                <img
+                  src={sajha}
+                  style={{ width: '100%' }}
+                  alt='why-choose-sajha-menu'
+                  className='img-fluid'
+                />
+              </Col>
+            </Row>
+          </Container>
         </section>
 
         {/* three sections - where, trusted-by, faqs */}

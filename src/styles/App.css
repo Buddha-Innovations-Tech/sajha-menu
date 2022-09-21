@@ -139,6 +139,12 @@ h1 {
   font-size: 22px;
   font-weight: 700;
 }
+@media all and (max-width: 1200px) {
+  h1 {
+    font-size: 30px !important;
+    line-height: 150% !important;
+  }
+}
 
 h2 {
   font-size: 36px;
@@ -370,7 +376,6 @@ ul {
   }
 }
 .why__card {
-  height: 100%;
   background: linear-gradient(0deg, #ffffff, #ffffff);
   box-shadow: 0px 0px 10px 2px rgba(229, 229, 229, 0.2);
   border-radius: 10px;
@@ -395,15 +400,20 @@ ul {
 
 .register-form {
   position: absolute;
-  right: 0%;
+  right: 5%;
   top: 129px;
   padding: 28px 43px;
   font-family: "Mulish", sans-serif;
   font-weight: normal;
   font-size: 16px;
   background-color: #fff;
-  margin-right: 85px;
   transition: all 8s ease-in-out;
+}
+@media all and (max-width: 768px) {
+  .register-form {
+    right: 0%;
+    margin: 0.5rem;
+  }
 }
 .register-form .icon {
   cursor: pointer;
@@ -507,6 +517,11 @@ ul {
   padding-top: 180px;
   position: relative;
 }
+@media all and (max-width: 1200px) {
+  .home .hero__content {
+    padding-top: 110px;
+  }
+}
 .home .hero__content--heading h1 {
   font-size: 48px;
   line-height: 58px;
@@ -530,6 +545,11 @@ ul {
   align-items: center;
   margin-top: 44px;
 }
+@media all and (max-width: 1200px) {
+  .home .hero__content--para {
+    margin-top: 16px;
+  }
+}
 .home .hero__content--para .line {
   position: absolute;
   height: 110px;
@@ -549,6 +569,11 @@ ul {
   margin-top: 66px;
   margin-bottom: 100px;
   display: inline-block;
+}
+@media all and (max-width: 1200px) {
+  .home .hero__content--buttons {
+    margin-top: 16px;
+  }
 }
 .home .hero__content--buttons-register {
   margin-right: 35px;
@@ -578,6 +603,11 @@ ul {
   bottom: 0%;
   right: 0%;
   width: 55%;
+}
+@media all and (max-width: 1200px) {
+  .home .hero__illustration {
+    width: 50%;
+  }
 }
 .home .hero__illustration img {
   width: 100%;
@@ -961,21 +991,33 @@ ul {
 .home .common .where__heading {
     padding: 0 45px;
   }
-  .home .hero__illustration {
+}
+@media only screen and (max-width: 768px) and (max-width: 576px) {
+  .hero__illustration img {
     display: none;
   }
+}
+@media only screen and (max-width: 768px) {
   .home .how-it-works__procedure .p-52 {
     padding: 52px 52px 52px 52px;
   }
+}
+@media only screen and (max-width: 768px) {
   .home .how-it-works__procedure-box .qr-code {
     height: auto;
   }
+}
+@media only screen and (max-width: 768px) {
   .home .newsletter__wrapper-box-inner {
     padding: 50px 40px;
   }
+}
+@media only screen and (max-width: 768px) {
   .home .newsletter__wrapper-form {
     padding: 0px !important;
   }
+}
+@media only screen and (max-width: 768px) {
   .home .newsletter__wrapper-left {
     margin: 0 0 52px 0;
   }
@@ -1044,5 +1086,14 @@ ul {
 .home .hero__content--buttons-watch {
     padding: 15px 30px;
     margin: 15px 0;
+  }
+}
+.howpara {
+  margin: 0 auto;
+  width: 50%;
+}
+@media all and (max-width: 768px) {
+  .howpara {
+    width: 100%;
   }
 }/*# sourceMappingURL=App.css.map */
