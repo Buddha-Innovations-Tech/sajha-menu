@@ -261,7 +261,7 @@ const Home = () => {
                     <div className='how-it-works__procedure-box box-2 p-52'>
                       <div className='qr-code demos'>
                         <div className='title'>
-                          <div className='user'>User Phone</div>
+                          <div className='user'>Customer's Phone</div>
                           <div className='waiter'>Waiter Phone</div>
                         </div>
                         <div className='image'>
@@ -494,66 +494,48 @@ const Home = () => {
             <div className='faq__qna'>
               <Slide bottom>
                 <AccordinComp
-                  header='1. How to create a QR code menu?'
-                  body=' Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-            veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-            commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-            velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-            cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-            est laborum.'
+                  header=' What is the Sajha menu?'
+                  body=' Sajhamenu is a quick  QR Code based food Ordering System that can be managed by a restaurant owner by generating a QR code scannable menu on the tables. This allows their customers to scan the QR code, browse the restaurant’s menu and order their desired items from their smartphones.'
                 />
               </Slide>
 
               <Slide bottom>
                 <AccordinComp
-                  header='2. How to create a QR code menu?'
-                  body=' Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-            veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-            commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-            velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-            cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-            est laborum.'
+                  header='How to create a QR code menu ?'
+                  body='It is a digital menu that can be scanned by customers to view the menu. It is created using our Manager Application and can be placed on the table for scanning.'
                 />
               </Slide>
 
               <Slide bottom>
                 <AccordinComp
-                  header='3.  How can I check orders from my clients?'
-                  body=' Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-            veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-            commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-            velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-            cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-            est laborum.'
+                  header='How Sajhamenu works ?'
+                  body='A customer scans the QR code placed on the table, after which they browse the menu and place an order for the desired items. A waiter receives and confirms the orders in Waiter’s application and finally prints the order in the kitchen printer. Lastly, the delicious food is served on the table based on the same print from the waiter. '
                 />
               </Slide>
 
               <Slide bottom>
                 <AccordinComp
-                  header='4. How will I receive orders?'
-                  body=' Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-            veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-            commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-            velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-            cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-            est laborum.'
+                  header='How to  setup QR code menu?'
+                  body='The manager is given an app namely  “ manager application “ with which all items on the menu can be set up and managed in a real-time manner. Furthermore after setting up the menu QR code is generated for all the tables from the same application.'
                 />
               </Slide>
 
               <Slide bottom>
                 <AccordinComp
-                  header='5. How will I receive orders?'
-                  body=' Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-            veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-            commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-            velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-            cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-            est laborum.'
+                  header='What are the device requirements to use Sajha Menu?'
+                  body='All  smart phones can be used for scanning a QR code by the customers. However, two mobile applications are provided by the company, one is manager application and another is waiter application for  managing menu and orders. '
+                />
+              </Slide>
+              <Slide bottom>
+                <AccordinComp
+                  header='Why is a digital menu better than a paper menu?'
+                  body='First thing first, this menu is paperless and turns out to be an economical solution for a long term usage. A digital menu is always updateable and scalable. It also radiates the modern vibes and makes a restaurant technology friendly. Also, customers  are given enough freedom and time to explore the menu and place their orders.'
+                />
+              </Slide>
+              <Slide bottom>
+                <AccordinComp
+                  header='Can customers make an order using the Sajha menu?'
+                  body="Yes that's the main catch !"
                 />
               </Slide>
             </div>
