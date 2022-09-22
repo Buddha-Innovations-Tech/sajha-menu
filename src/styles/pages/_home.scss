@@ -23,7 +23,7 @@
         h1 {
           font-size: 46px;
           line-height: 58px;
-          font-family: "Mulish", sans-serif;
+          font-family: 'Mulish', sans-serif;
           font-weight: 900;
           margin-bottom: 0;
 
@@ -62,7 +62,7 @@
           width: 80%;
           font-size: 18px;
           line-height: 27px;
-          font-family: "Mulish", sans-serif;
+          font-family: 'Mulish', sans-serif;
           font-weight: 500;
           color: #303030;
           // margin-top: 44px;
@@ -113,7 +113,7 @@
     text-align: center;
 
     &__heading {
-      font-family: "Mulish", sans-serif;
+      font-family: 'Mulish', sans-serif;
       color: #303030;
       h2 {
         font-size: 36px;
@@ -163,7 +163,7 @@
 
           .title {
             margin-bottom: 16px;
-            font-family: "Mulish", sans-serif;
+            font-family: 'Mulish', sans-serif;
             font-size: 18px;
             // font-size: 24px;
             font-weight: 700;
@@ -174,7 +174,7 @@
         }
 
         .content {
-          font-family: "Mulish", sans-serif;
+          font-family: 'Mulish', sans-serif;
           font-weight: 500;
           font-size: 14px;
           line-height: 17px;
@@ -234,7 +234,7 @@
     text-align: center;
 
     &__heading {
-      font-family: "Mulish", sans-serif;
+      font-family: 'Mulish', sans-serif;
       color: #303030;
       h2 {
         font-size: 36px;
@@ -280,7 +280,7 @@
 
     .where {
       &__heading {
-        font-family: "Mulish", sans-serif;
+        font-family: 'Mulish', sans-serif;
         color: #303030;
         h2 {
           font-size: 36px;
@@ -358,7 +358,7 @@
       border-radius: 15px;
 
       &__heading {
-        font-family: "Mulish", sans-serif;
+        font-family: 'Mulish', sans-serif;
         color: #303030;
         h2 {
           font-size: 36px;
@@ -388,8 +388,9 @@
     }
 
     .faq {
+      margin-top: 2rem;
       &__heading {
-        font-family: "Mulish", sans-serif;
+        font-family: 'Mulish', sans-serif;
         color: #303030;
         h2 {
           font-size: 36px;
@@ -477,7 +478,7 @@
       &-form {
         padding: 0px 0 0 52px !important;
 
-        input[type="textarea"] {
+        input[type='textarea'] {
           height: 105px;
           padding: 15px 0 75px 15px;
         }
@@ -496,6 +497,11 @@
 .how_sajamenu_works {
   text-align: left;
   margin-top: 15px;
+  margin-left: 17%;
+
+  @include responsive-for(md) {
+    margin-left: 0;
+  }
 }
 @media only screen and (max-width: 2000px) {
   .home .how-it-works__procedure-box .qr-code {

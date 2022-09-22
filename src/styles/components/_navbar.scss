@@ -6,15 +6,21 @@
   width: 100%;
   z-index: 99;
   overflow: hidden;
-  border-bottom: 3px solid #FFBC72;
-//   box-shadow: 2px 8px 10px -5px rgba(0,0,0,0.75);
-// -webkit-box-shadow: 2px 8px 10px -5px rgba(0,0,0,0.75);
-// -moz-box-shadow: 2px 8px 10px -5px rgba(0,0,0,0.75);
+  border-bottom: 3px solid #ffbc72;
+  //   box-shadow: 2px 8px 10px -5px rgba(0,0,0,0.75);
+  // -webkit-box-shadow: 2px 8px 10px -5px rgba(0,0,0,0.75);
+  // -moz-box-shadow: 2px 8px 10px -5px rgba(0,0,0,0.75);
 
   .connect {
     &__btn {
       @include btn(#303030);
-      padding: 13px 30px;
+      padding: 10px 30px;
+    }
+  }
+
+  .logo {
+    img {
+      width: 3.5rem;
     }
   }
 }
@@ -23,7 +29,7 @@
   .nav {
     .connect {
       &__btn {
-        padding: 10px 24px;
+        padding: 8px 24px;
       }
     }
   }
