@@ -512,6 +512,95 @@ ul {
   border-radius: 7px;
 }
 
+.bton {
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  border-radius: 4px;
+  cursor: pointer;
+  border-width: 1px;
+  border-style: solid;
+  font-size: 16px;
+  transition: all 0.2s ease-in-out;
+}
+.bton--sm {
+  padding-left: 20px;
+  padding-right: 20px;
+  line-height: 34px;
+}
+.bton--md {
+  padding-left: 28px;
+  padding-right: 28px;
+  line-height: 39px;
+}
+.bton--lg {
+  padding-left: 36px;
+  padding-right: 36px;
+  line-height: 39px;
+}
+.bton--full {
+  line-height: 46px;
+  margin: 0;
+  width: 100%;
+  font-weight: 100;
+}
+.bton--half {
+  line-height: 48px;
+  width: 50%;
+}
+.bton--primary {
+  border-color: #8dc73d;
+  color: black;
+  background-color: #8dc73d;
+}
+.bton--primary:hover {
+  color: white;
+}
+.bton--primary:active {
+  border-color: #085488;
+}
+.bton--secondary {
+  color: white;
+  background-color: #004f9a;
+  border-color: #004f9a;
+}
+.bton--secondary:hover {
+  background-color: #ffae4e;
+  border-color: #ffae4e;
+  color: white;
+}
+.bton--ghost {
+  border-radius: 4px;
+  border-color: #8dc73d;
+  color: #8dc73d;
+  background-color: transparent;
+}
+.bton--ghost:hover {
+  color: white;
+}
+.bton--ghost:active {
+  border-color: #085488;
+}
+.bton--ghost--danger {
+  border-color: #eb5757;
+  color: #eb5757;
+}
+.bton--ghost--danger:hover {
+  background-color: #eb5757;
+  border-color: #eb5757;
+  color: white;
+}
+.bton--danger {
+  background: #eb5757;
+  color: white;
+  border: #eb5757;
+}
+.bton--nacked {
+  border: none;
+  color: white;
+  background: none;
+  padding: 0;
+}
+
 @font-face {
   font-family: "Proxima";
   src: url("../../assets/fonts/Fontspring-DEMO-proximanova-extrabold.otf");

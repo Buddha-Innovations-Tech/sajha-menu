@@ -1,44 +1,29 @@
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col } from 'react-bootstrap';
 
 const Download = () => {
   return (
     <>
       <Container>
-        <Row style={{ margin: "200px 0", textAlign: "center" }}>
-          <Col md={2}></Col>
-          <Col md={4}>
-            <a
-              style={{
-                textDecoration: "none",
-                padding: "10px 15px",
-                backgroundColor: "green",
-                borderRadius: "5px",
-                color: "white",
-                fontSize: "20px",
-              }}
-              href="/admin.apk"
-            >
-              Download Sajha Menu
+        <section
+          style={{ margin: '10rem auto', width: '20rem', textAlign: 'center' }}
+        >
+          <div>
+            <a href='/admin.apk'>
+              <button className='bton bton--md bton--primary'>
+                Download Manager App
+              </button>
             </a>
-          </Col>
+          </div>
 
-          <Col md={4}>
-            <a
-              style={{
-                textDecoration: "none",
-                padding: "10px 15px",
-                backgroundColor: "green",
-                borderRadius: "5px",
-                color: "white",
-                fontSize: "20px",
-              }}
-              href="/waiter.apk"
-            >
-              Download Waiter Menu
+          <div className='mt-4'>
+            <a href='/waiter.apk'>
+              <button className='bton bton--md bton--primary'>
+                {' '}
+                Download Waiter App
+              </button>
             </a>
-          </Col>
-          <Col md={2}></Col>
-        </Row>
+          </div>
+        </section>
       </Container>
     </>
   );
