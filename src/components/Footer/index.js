@@ -62,7 +62,7 @@ const Footer = () => {
               <ul className='clearfix footer__blocks--content'>
                 <li className='mb-20'>
                   <FaPhoneAlt className='icon mr-13' />
-                  071438471 9812345678
+                  071438471
                 </li>
                 <li className='mb-20'>
                   <FaEnvelope className='icon mr-13' />
