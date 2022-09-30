@@ -1,9 +1,10 @@
 import { Col, Row, Container, Form, Modal } from 'react-bootstrap';
-
+import * as emailjs from 'emailjs-com';
 import { ImCross } from 'react-icons/im';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Slider from 'react-slick';
+import video from '../../assets/images/menu.webm';
 // import Modal from "react-bootstrap/Modal";
 import React, { useState } from 'react';
 
@@ -56,10 +57,14 @@ import { useRef } from 'react';
 
 const Home = () => {
   const [show, setShow] = useState(false);
-
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
-
+  const initialFormState = {
+    name: '',
+    email: '',
+    message: '',
+    subject: 'Enquiry',
+  };
   const settings = {
     dots: false,
     infinite: true,
@@ -69,14 +74,66 @@ const Home = () => {
     autoplay: true,
   };
 
-  const register = () => {
-    document.getElementById('one').style.display = 'none';
-    document.getElementById('two').style.display = 'block';
+  const [contactData, setContactData] = useState({ ...initialFormState });
+  const initialRegisterState = {
+    name: '',
+    email: '',
+    phone: '',
+    type: '',
+    company_name: '',
   };
 
-  const closeForm = () => {
-    document.getElementById('two').style.display = 'none';
-    document.getElementById('one').style.display = 'block';
+  const [registerData, setRegisterData] = useState({ ...initialRegisterState });
+
+  const handleChange = ({ target }) => {
+    setContactData({
+      ...contactData,
+      [target.name]: target.value,
+    });
+  };
+  const handleRegisterChange = ({ target }) => {
+    setRegisterData({
+      ...registerData,
+      [target.name]: target.value !== '0' ? target.value : null,
+    });
+  };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (
+      contactData.name !== '' &&
+      contactData.phone !== '' &&
+      contactData.message !== ''
+    )
+      emailjs
+        .sendForm(
+          process.env.REACT_APP_EMAIL_SERVICE_ID,
+          process.env.REACT_APP_EMAIL_TEMPLATE_ID,
+          e.target,
+          process.env.REACT_APP_EMAIL_USER_ID
+        )
+        .then((res) => {
+          setContactData(initialFormState);
+        });
+  };
+  const handleRegisterSubmit = (e) => {
+    e.preventDefault();
+    if (
+      registerData.name !== '' &&
+      registerData.phone !== '' &&
+      registerData.message !== '' &&
+      registerData.type
+    )
+      emailjs
+        .sendForm(
+          process.env.REACT_APP_EMAIL_SERVICE_ID,
+          process.env.REACT_APP_EMAIL_TEMPLATE_ID,
+          e.target,
+          process.env.REACT_APP_EMAIL_USER_ID
+        )
+        .then((res) => {
+          setRegisterData(initialRegisterState);
+          handleClose();
+        });
   };
 
   return (
@@ -152,81 +209,90 @@ const Home = () => {
                       Fill out the form to register and our team will contact
                       you.
                     </p>
-                    <Form>
+                    <Form onSubmit={handleRegisterSubmit}>
                       <div className='mx-20'>
-                        <InputForm
-                          label='Name'
-                          type='text'
-                          placeholder='Enter Your Full Name'
-                          name='name'
-                          asteric='*'
-                          required
-                        />
+                        <Form.Group>
+                          <Form.Label>Name</Form.Label>
+                          <Form.Control
+                            type='text'
+                            placeholder='Enter your full Name'
+                            name='name'
+                            value={registerData.name}
+                            onChange={handleRegisterChange}
+                            required
+                          />
+                        </Form.Group>
                       </div>
                       <div className='mx-20'>
-                        <InputForm
-                          label='Email'
-                          type='email'
-                          placeholder='Enter Your Email Address(Optional)'
-                          name='email'
-                        />
+                        <Form.Group>
+                          <Form.Label>Email</Form.Label>
+                          <Form.Control
+                            type='email'
+                            placeholder='Enter your Email Address(Optional)'
+                            name='email'
+                            value={registerData.email}
+                            onChange={handleRegisterChange}
+                            required
+                          />
+                        </Form.Group>
                       </div>
 
                       {/* business type */}
-                      <div className=' d-lg-flex justify-content-between'>
-                        <div
-                          style={{ width: '48%' }}
-                          className='select-small mx-20'
-                        >
-                          <Form.Label>Business Type</Form.Label>
-                          <div className='custom-select'>
-                            <select>
-                              <option selected>Select Business </option>
-                              <option value='1'>Restaurant</option>
-                              <option value='2'>Bakery</option>
-                              <option value='3'>Hotel</option>
-                              <option value='4'>Cafe</option>
-                            </select>
-                          </div>
-                        </div>
-                        <div
-                          style={{ width: '50%' }}
-                          className='select-small mx-20'
-                        >
-                          <InputForm
-                            label='Phone Number'
-                            type='text'
-                            placeholder='Enter Your Phone Number'
-                            name='mobilenumber'
-                            asteric='*'
-                            required
-                          />
-                        </div>
+
+                      <div className='mx-20  '>
+                        <Row>
+                          <Col md={6} sm={12}>
+                            <div>
+                              <Form.Label>Business Type</Form.Label>
+                              <div className='custom-select'>
+                                <select
+                                  name='type'
+                                  value={registerData.type || ''}
+                                  onChange={handleRegisterChange}
+                                >
+                                  <option value='0'>Select </option>
+                                  <option value='restaurant'>Restaurant</option>
+                                  <option value='cafe'>cafe</option>
+                                  <option value='hotel'>Hotel</option>
+                                  <option value='bakery'>Bakery</option>
+                                </select>
+                              </div>
+                            </div>
+                          </Col>
+                          <Col md={6} sm={12}>
+                            <div>
+                              <Form.Group>
+                                <Form.Label>Phone</Form.Label>
+                                <Form.Control
+                                  type='text'
+                                  placeholder='Enter your phone'
+                                  name='phone'
+                                  value={registerData.phone}
+                                  onChange={handleRegisterChange}
+                                  required
+                                />
+                              </Form.Group>
+                            </div>
+                          </Col>
+                        </Row>
                       </div>
 
                       <div className='mx-20'>
-                        <InputForm
-                          label='Company Name'
-                          type='text'
-                          placeholder='Enter Your Company Name'
-                          name='company'
-                          asteric='*'
-                          required
-                        />
+                        <Form.Group>
+                          <Form.Label>Company Name</Form.Label>
+                          <Form.Control
+                            type='text'
+                            placeholder='Enter your company name'
+                            name='company_name'
+                            value={registerData.company_name}
+                            onChange={handleRegisterChange}
+                            required
+                          />
+                        </Form.Group>
                       </div>
-
-                      {/* <div className="mx-20">
-                    <InputForm
-                      label="Phone Number"
-                      type="number"
-                      placeholder="Enter Your Phone Number"
-                      name="mobilenumber"
-                      asteric="*"
-                      required
-                    />
-                  </div> */}
-
-                      <button className='submit'>Submit</button>
+                      <button className='submit' type='submit'>
+                        Submit
+                      </button>
                     </Form>
                   </div>
                 </Modal.Body>
@@ -675,16 +741,14 @@ const Home = () => {
                   xs={{ order: 'last' }}
                   className='newsletter__wrapper-left'
                 >
-                  <div className='newsletter__wrapper-box'>
-                    <div className='newsletter__wrapper-box-inner'>
-                      <img
-                        src={demo}
-                        style={{ height: '284px' }}
-                        alt='user-demo'
-                        className='img-fluid demo'
-                      />
-                    </div>
-                  </div>
+                  <video
+                    style={{ width: '500px', borderRadius: '15px' }}
+                    autoPlay
+                    muted
+                    loop
+                  >
+                    <source src={video} />
+                  </video>
                 </Col>
 
                 <Col
@@ -697,58 +761,56 @@ const Home = () => {
                   <div className='newsletter__wrapper-form'>
                     <h2>Contact Us</h2>
                     <p>Fill out the form and our team will contact you.</p>
-                    <Form>
+                    <Form onSubmit={handleSubmit}>
                       <div className='mx-20'>
-                        <InputForm
-                          label='Name'
+                        <Form.Label>
+                          Name <sup style={{ color: 'red' }}>*</sup>
+                        </Form.Label>
+                        <Form.Control
                           type='text'
-                          placeholder='Full Name'
+                          placeholder='Enter your name'
                           name='name'
-                          asteric='*'
+                          onChange={handleChange}
                           required
                         />
                       </div>
                       <div className='mx-20'>
-                        <InputForm
-                          label='Phone Number'
-                          type='number'
-                          placeholder=' Phone Number'
-                          name='mobilenumber'
-                          asteric='*'
+                        <Form.Label>
+                          Phone Number <sup style={{ color: 'red' }}>*</sup>
+                        </Form.Label>
+                        <Form.Control
+                          type='text'
+                          placeholder='Enter your Phone'
+                          name='phone'
+                          onChange={handleChange}
                           required
                         />
                       </div>
                       <div className='mx-20'>
-                        <InputForm
-                          label='Email Address'
-                          type='email'
-                          placeholder='Email Address (Optional)'
+                        <Form.Label>Email Address</Form.Label>
+                        <Form.Control
+                          type='text'
+                          placeholder='Enter your Phone'
                           name='email'
+                          onChange={handleChange}
+                          required
                         />
                       </div>
                       <div className='mx-20'>
-                        {/* <InputForm
-                          label="Message"
-                          type="textarea"
-                          placeholder="Your Message Here"
-                          name="msg"
-                          row={3}
-                          asteric="*"
+                        <Form.Label>
+                          Phone Number <sup style={{ color: 'red' }}>*</sup>
+                        </Form.Label>
+                        <Form.Control
+                          type='text'
+                          placeholder='Enter your Message'
+                          name='message'
+                          onChange={handleChange}
                           required
-                        /> */}
-                        <Form.Group
-                          className='mb-3'
-                          controlId='exampleForm.ControlTextarea1'
-                        >
-                          <Form.Label>Message</Form.Label>
-                          <Form.Control
-                            as='textarea'
-                            rows={3}
-                            placeholder='Message'
-                          />
-                        </Form.Group>
+                        />
                       </div>
-                      <button className='submit'>Submit</button>
+                      <button className='submit' type='submit'>
+                        Submit
+                      </button>
                     </Form>
                   </div>
                 </Col>

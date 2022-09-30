@@ -83,13 +83,13 @@ const Footer = () => {
             >
               <h5 className='footer__blocks--header mb-30'>Social Media</h5>
               {/* <p className="footer__blocks--content"> */}
-              <a href='https://www.facebook.com/sajhamenu'>
+              <a target='_blank' href='https://www.facebook.com/sajhamenu'>
                 <FaFacebook className='icon fbicon' />
               </a>
-              <a href='https://twitter.com/sajhamenu'>
+              <a target='_blank' href='https://twitter.com/sajhamenu'>
                 <AiFillTwitterCircle className='icon ' />
               </a>
-              <a href='https://www.instagram.com/sajhamenu'>
+              <a target='_blank' href='https://www.instagram.com/sajhamenu'>
                 <AiFillInstagram className='icon ' />
               </a>
 
