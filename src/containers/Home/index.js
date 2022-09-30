@@ -39,22 +39,6 @@ import three from '../../assets/images/3.png';
 import four from '../../assets/images/4.png';
 import five from '../../assets/images/5.png';
 
-// trusted-section images
-import darkwood from '../../assets/images/image-darkwood.png';
-// import daddys from "../../assets/images/image-daddys.png";
-// import durbar from "../../assets/images/image-concept.png";
-// import maharaja from "../../assets/images/image-mahaaraja.png";
-// import kkfc from "../../assets/images/image-kkfc.png";
-import pauwa from '../../assets/images/image-pauwa.png';
-import concept from '../../assets/images/image-ovenfresh.png';
-import Fourseasons from '../../assets/images/fourseasons.png';
-import Diamond from '../../assets/images/diamond.png';
-import Vastukri from '../../assets/images/vastukri.png';
-import NinetyFour from '../../assets/images/NinetyFour.png';
-import Garden from '../../assets/images/Garden.jpg';
-import { Link } from 'react-router-dom';
-import { useRef } from 'react';
-
 const Home = () => {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
@@ -63,6 +47,7 @@ const Home = () => {
     name: '',
     email: '',
     message: '',
+    phone: '',
     subject: 'Enquiry',
   };
   const settings = {
@@ -112,6 +97,7 @@ const Home = () => {
           process.env.REACT_APP_EMAIL_USER_ID
         )
         .then((res) => {
+          console.log(res.status, 'done');
           setContactData(initialFormState);
         });
   };
@@ -151,11 +137,6 @@ const Home = () => {
                   <Slide left>
                     <div className='hero__content--heading'>
                       <h1>
-                        {/* <img
-                        src={acb}
-                        alt="hero__bg-image"
-                        className="img-fluid imgg"
-                      /> */}
                         <div className='bg'>
                           <span className='text-white'> Scan </span>
                           QR Code, View Menu
@@ -317,9 +298,6 @@ const Home = () => {
           <div className='how-it-works__heading '>
             <h2>How Does Sajha Menu Work ?</h2>
             <p>
-              {/* Its simple as 1-2-3. The client comes, scans his mobile to see
-              your menu and the staff takes the order. No POS or Payment
-              gateways integration required.  */}
               Sajha Menu Working Principle is as simple as 1-2-3.
               <ol className='how_sajamenu_works '>
                 <li>
@@ -373,11 +351,6 @@ const Home = () => {
                         </div>
                         <div className='image'>
                           <div className='user-demo'>
-                            {/* <img
-                              src={demo}
-                              alt="user-demo"
-                              className="img-fluid"
-                            /> */}
                             <video
                               src={CustomerVideo}
                               width='110'
@@ -390,11 +363,6 @@ const Home = () => {
                             </video>
                           </div>
                           <div className='waiter-demo'>
-                            {/* <img
-                              src={demo}
-                              alt="waiter-demo"
-                              className="img-fluid"
-                            /> */}
                             <video
                               src={WaiterVideo}
                               width='110'
@@ -595,81 +563,6 @@ const Home = () => {
             </div>
           </section>
 
-          {/* trusted-by */}
-          {/* <section className="trusted-by">
-            <div className="container">
-              <div className="trusted-by__heading">
-                <h2>Trusted by </h2>
-              </div>
-
-              <div className="trusted-by__images">
-               
-                <Row className="justify-content-center align-items-center">
-                  <Col lg={3} xs={6} className="mb-4 p-0">
-                    <img
-                      src={Garden}
-                      alt="one"
-                      className="img-fluid trusted-img"
-                    />
-                  </Col>
-                  <Col lg={3} xs={6} className="mb-4 p-0">
-                    <img
-                      src={NinetyFour}
-                      alt="one"
-                      className="img-fluid trusted-img"
-                    />
-                  </Col>
-                  <Col lg={3} xs={6} className="mb-4 p-0">
-                    <img
-                      src={pauwa}
-                      alt="one"
-                      className="img-fluid trusted-img"
-                    />
-                  </Col>
-                  <Col lg={3} xs={6} className="mb-4 p-0">
-                    <img
-                      src={Vastukri}
-                      alt="one"
-                      className="img-fluid trusted-img"
-                    />
-                  </Col>
-                </Row>
-               
-                <Row className="justify-content-center align-items-center">
-                  <Col lg={3} xs={6} className="mb-4 p-0">
-                    <img
-                      src={Diamond}
-                      alt="one"
-                      className="img-fluid trusted-img"
-                    />
-                  </Col>
-                  <Col lg={3} xs={6} className="mb-4 p-0">
-                    <img
-                      src={Fourseasons}
-                      alt="one"
-                      className="img-fluid trusted-img"
-                    />
-                  </Col>
-                  <Col lg={3} xs={6} className="mb-4 p-0">
-                    <img
-                      src={concept}
-                      alt="one"
-                      className="img-fluid trusted-img"
-                    />
-                  </Col>
-                  <Col lg={3} xs={6} className="mb-4 p-0">
-                    <img
-                      src={darkwood}
-                      alt="one"
-                      className="img-fluid trusted-img"
-                    />
-                  </Col>
-                </Row>
-               
-              </div>
-            </div>
-          </section> */}
-
           {/* faq */}
           <div className='container'>
             <section className='faq'>
@@ -770,6 +663,7 @@ const Home = () => {
                           type='text'
                           placeholder='Enter your name'
                           name='name'
+                          value={contactData.name}
                           onChange={handleChange}
                           required
                         />
@@ -782,6 +676,7 @@ const Home = () => {
                           type='text'
                           placeholder='Enter your Phone'
                           name='phone'
+                          value={contactData.phone}
                           onChange={handleChange}
                           required
                         />
@@ -792,18 +687,20 @@ const Home = () => {
                           type='text'
                           placeholder='Enter your Phone'
                           name='email'
+                          value={contactData.email}
                           onChange={handleChange}
                           required
                         />
                       </div>
                       <div className='mx-20'>
                         <Form.Label>
-                          Phone Number <sup style={{ color: 'red' }}>*</sup>
+                          Message <sup style={{ color: 'red' }}>*</sup>
                         </Form.Label>
                         <Form.Control
-                          type='text'
+                          type='textarea'
                           placeholder='Enter your Message'
                           name='message'
+                          value={contactData.message}
                           onChange={handleChange}
                           required
                         />
