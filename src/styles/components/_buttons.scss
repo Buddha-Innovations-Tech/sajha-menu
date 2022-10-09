@@ -15,9 +15,9 @@
     line-height: 34px;
   }
   &--md {
-    padding-left: 28px;
-    padding-right: 28px;
-    line-height: 39px;
+    padding-left: 32px;
+    padding-right: 32px;
+    line-height: 49px;
   }
   &--lg {
     padding-left: 36px;
@@ -37,7 +37,7 @@
 
   &--primary {
     border-color: color(primary, base);
-    color: black;
+    color: rgb(255, 255, 255);
     background-color: color(primary, base);
     &:hover {
       background-color: color(primary, hover);

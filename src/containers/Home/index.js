@@ -118,23 +118,32 @@ const Home = () => {
                         className='img-fluid line'
                       />
                       <p>
-                        View your sales stats, Improve your menu and grow your
-                        business with our touchless QR ordering solution SAJHA
-                        MENU. Click register to get started
+                        Setup your menu, View your sales stats, and grow your
+                        business with our touchless QR based food ordering
+                        solution SAJHA MENU.
                       </p>
                     </div>
 
                     <div className='hero__content--buttons'>
-                      <button
+                      {/* <button
                         className='hero__content--buttons-register'
+                        onClick={handleShow}
+                      >
+                        Register Now
+                      </button> */}
+                      <button
+                        className='bton bton--primary bton--md'
                         onClick={handleShow}
                       >
                         Register Now
                       </button>
                       <a href='#watch-video'>
-                        <button className='hero__content--buttons-watch'>
+                        <button className='bton bton--ghost bton--md ms-1 ms-sm-2  mt-sm-0 mt-2 '>
                           Watch Video
                         </button>
+                        {/* <button className='hero__content--buttons-watch'>
+                          Watch Video
+                        </button> */}
                       </a>
                     </div>
                   </Slide>
@@ -615,7 +624,7 @@ const Home = () => {
                 <Slide bottom>
                   <AccordinComp
                     header='1.What is the Sajha menu?'
-                    body='Sajhamenu is a quick  QR Code based food Ordering System that can be managed by a restaurant owner by generating a scannable QR code  menu on the tables. This allows their customers to scan the QR code, browse the restaurant’s menu and order their desired items from their smartphones.'
+                    body='Sajha Menu is a quick  QR Code based food Ordering System that can be managed by a restaurant owner by generating a scannable QR code  menu on the tables. This allows their customers to scan the QR code, browse the restaurant’s menu and order their desired items from their smartphones.'
                   />
                 </Slide>
 
@@ -628,7 +637,7 @@ const Home = () => {
 
                 <Slide bottom>
                   <AccordinComp
-                    header='3.How Sajhamenu works ?'
+                    header='3.How Sajha Menu works ?'
                     body='A customer scans the QR code placed on the table, after which they browse the menu and place an order for the desired items. A waiter receives and confirms the orders in Waiter’s application and finally prints the order in the kitchen printer. Lastly, the delicious food is served on the table based on the same print from the waiter. '
                   />
                 </Slide>

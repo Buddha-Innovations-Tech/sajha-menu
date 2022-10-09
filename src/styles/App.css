@@ -39,7 +39,7 @@
 }
 
 .color-primary {
-  color: #8dc73d;
+  color: #303030;
 }
 .color-gray1 {
   color: #0f284d;
@@ -67,7 +67,7 @@
 }
 
 .cpm {
-  color: #8dc73d;
+  color: #303030;
 }
 
 .csc {
@@ -528,9 +528,9 @@ ul {
   line-height: 34px;
 }
 .bton--md {
-  padding-left: 28px;
-  padding-right: 28px;
-  line-height: 39px;
+  padding-left: 32px;
+  padding-right: 32px;
+  line-height: 49px;
 }
 .bton--lg {
   padding-left: 36px;
@@ -548,11 +548,13 @@ ul {
   width: 50%;
 }
 .bton--primary {
-  border-color: #8dc73d;
-  color: black;
-  background-color: #8dc73d;
+  border-color: #303030;
+  color: rgb(255, 255, 255);
+  background-color: #303030;
 }
 .bton--primary:hover {
+  background-color: #000000;
+  border-color: #000000;
   color: white;
 }
 .bton--primary:active {
@@ -570,11 +572,13 @@ ul {
 }
 .bton--ghost {
   border-radius: 4px;
-  border-color: #8dc73d;
-  color: #8dc73d;
+  border-color: #303030;
+  color: #303030;
   background-color: transparent;
 }
 .bton--ghost:hover {
+  background-color: #000000;
+  border-color: #000000;
   color: white;
 }
 .bton--ghost:active {
@@ -659,7 +663,7 @@ ul {
 .home .hero__content--para .line {
   position: absolute;
   height: 110px;
-  bottom: -18%;
+  bottom: -55%;
   left: -2.5%;
 }
 .home .hero__content--para p {
@@ -671,6 +675,12 @@ ul {
   color: #303030;
   margin-bottom: 0;
   margin-left: 35px;
+}
+@media all and (max-width: 576px) {
+  .home .hero__content--para p {
+    width: 100% !important;
+    font-size: 16px;
+  }
 }
 .home .hero__content--buttons {
   margin-top: 66px;
@@ -1073,7 +1083,7 @@ ul {
   .home .hero__content--para .line {
     position: absolute;
     height: 195px;
-    bottom: -23%;
+    bottom: -71%;
     left: -4%;
   }
   .home .newsletter__wrapper-box-inner {
@@ -1160,7 +1170,7 @@ ul {
   }
   .home .hero__content--para .line {
     left: -17px;
-    top: -19px;
+    top: -35px;
   }
   .mr-3.col-md-4 {
     margin: 10px 0 !important;
@@ -1192,6 +1202,11 @@ ul {
   }
 }
 @media only screen and (max-width: 576px) {
+  .home .hero__content--para .line {
+    height: 140px;
+    top: -25px;
+    left: -6%;
+  }
   .how-it-works__heading p,
 .why-choose__heading p,
 .where__heading p {
@@ -1223,9 +1238,7 @@ ul {
     padding: 12px 26px;
   }
   .home .hero__content--para .line {
-    height: 195px;
-    bottom: -23%;
-    left: -6%;
+    height: 160px;
   }
   div#watch-video {
     padding: 0 0 52px 0;
@@ -1259,6 +1272,10 @@ ul {
   }
 }
 @media only screen and (max-width: 320px) {
+  .home .hero__content--para .line {
+    height: 160px;
+    left: -10%;
+  }
   .home .hero__content--buttons-register,
 .home .hero__content--buttons-watch {
     padding: 15px 30px;
