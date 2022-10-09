@@ -5,6 +5,7 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Slider from 'react-slick';
 import video from '../../assets/images/menu.webm';
+import tableImage from '../../assets/images/table_qr.jpg';
 // import Modal from "react-bootstrap/Modal";
 import React, { useState } from 'react';
 
@@ -325,7 +326,7 @@ const Home = () => {
                     <div className='how-it-works__procedure-box p-52'>
                       <div className='qr-code'>
                         {/* <Link to="/download"> */}
-                        <div className='title'>Try Sajha Menu</div>
+                        <h3 className='title'>Scan and View demo</h3>
                         <div className='image'>
                           <img
                             src={qrcode}
@@ -345,12 +346,13 @@ const Home = () => {
                   <Col lg={6}>
                     <div className='how-it-works__procedure-box box-2 p-52 p-52-small'>
                       <div className='qr-code demos'>
-                        <div className='title'>
+                        <h3 className=''>How it works</h3>
+                        {/* <div className='title'>
                           <div className='user'>User Phone</div>
                           <div className='waiter'>Waiter Phone</div>
-                        </div>
+                        </div> */}
                         <div className='image'>
-                          <div className='user-demo'>
+                          {/* <div className='user-demo'>
                             <video
                               src={CustomerVideo}
                               width='110'
@@ -373,7 +375,20 @@ const Home = () => {
                             >
                               <source src={CustomerVideo} type='video/mp4' />
                             </video>
-                          </div>
+                          </div> */}
+
+                          <video
+                            style={{
+                              width: '100%',
+                              borderRadius: '15px',
+                              marginTop: '1.5rem',
+                            }}
+                            autoPlay
+                            muted
+                            loop
+                          >
+                            <source src={video} />
+                          </video>
                         </div>
                       </div>
                       <div className='content pt-24'>
@@ -632,16 +647,17 @@ const Home = () => {
                   md={{ order: 'last' }}
                   sm={{ order: 'last' }}
                   xs={{ order: 'last' }}
-                  className='newsletter__wrapper-left'
+                  className='newsletter__wrapper-left '
                 >
-                  <video
+                  {/* <video
                     style={{ width: '500px', borderRadius: '15px' }}
                     autoPlay
                     muted
                     loop
                   >
                     <source src={video} />
-                  </video>
+                  </video> */}
+                  <img className='newsletterImage' src={tableImage} alt='' />
                 </Col>
 
                 <Col
