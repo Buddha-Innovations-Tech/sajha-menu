@@ -1,14 +1,6 @@
 /* 2.3 Font weight*/
 /* 2.1 Font Size*/
 /* 3.0 Heading Size*/
-@-webkit-keyframes preloadAnim {
-  0% {
-    background-position: -1200px 0;
-  }
-  100% {
-    background-position: 1200px 0;
-  }
-}
 @keyframes preloadAnim {
   0% {
     background-position: -1200px 0;
@@ -224,9 +216,12 @@ ul {
 }
 .footer__blocks--content {
   font-style: normal;
-  font-weight: 500;
+  font-weight: 300;
   font-size: 18px;
   line-height: 27px;
+}
+.footer__blocks--content .contactInfo {
+  font-size: 14px;
 }
 .footer__blocks ul {
   margin: 0;
@@ -306,13 +301,13 @@ ul {
 }
 @media only screen and (max-width: 992px) {
   .footer__blocks.footer__blocks--quick-links.col-lg-3,
-.footer__blocks.footer__blocks--social-media.col-lg-2 {
+  .footer__blocks.footer__blocks--social-media.col-lg-2 {
     margin-left: 25px !important;
   }
   .footer__blocks.footer__blocks--about.col-lg-3,
-.footer__blocks.footer__blocks--quick-links.col-lg-3,
-.footer__blocks.footer__blocks--contact.col-lg-3,
-.footer__blocks.footer__blocks--social-media.col-lg-2 {
+  .footer__blocks.footer__blocks--quick-links.col-lg-3,
+  .footer__blocks.footer__blocks--contact.col-lg-3,
+  .footer__blocks.footer__blocks--social-media.col-lg-2 {
     margin: 20px 0 !important;
   }
 }
@@ -342,7 +337,7 @@ ul {
     padding-left: 20px !important;
   }
   .footer__blocks.footer__blocks--quick-links.col-lg-3,
-.footer__blocks.footer__blocks--social-media.col-lg-2 {
+  .footer__blocks.footer__blocks--social-media.col-lg-2 {
     margin-left: 0px !important;
   }
 }
@@ -1098,7 +1093,7 @@ ul {
     width: 90%;
   }
   .home .why-choose__heading p,
-.home .common .where__heading p {
+  .home .common .where__heading p {
     width: 90%;
   }
   .home .newsletter__wrapper-both {
@@ -1164,8 +1159,8 @@ ul {
     padding-left: calc(var(--bs-gutter-x) * 0.5) !important;
   }
   .home .how-it-works__heading,
-.home .why-choose__heading,
-.home .common .where__heading {
+  .home .why-choose__heading,
+  .home .common .where__heading {
     padding: 0 35px;
   }
   .home .hero__illustration {
@@ -1189,8 +1184,8 @@ ul {
 }
 @media only screen and (max-width: 576px) {
   .how-it-works__heading p,
-.why-choose__heading p,
-.where__heading p {
+  .why-choose__heading p,
+  .where__heading p {
     text-align: left;
   }
   .home .hero__content {
@@ -1214,7 +1209,7 @@ ul {
     padding: 0;
   }
   .home .hero__content--buttons-register,
-.home .hero__content--buttons-watch {
+  .home .hero__content--buttons-watch {
     font-size: 16px;
     padding: 12px 26px;
   }
@@ -1256,7 +1251,7 @@ ul {
 }
 @media only screen and (max-width: 320px) {
   .home .hero__content--buttons-register,
-.home .hero__content--buttons-watch {
+  .home .hero__content--buttons-watch {
     padding: 15px 30px;
     margin: 15px 0;
   }

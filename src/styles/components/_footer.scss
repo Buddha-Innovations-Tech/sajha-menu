@@ -2,7 +2,7 @@
   background-color: #303030;
   color: color(text-white);
   padding-top: 90px;
-  font-family: "Mulish", sans-serif;
+  font-family: 'Mulish', sans-serif;
   .container {
     padding-left: 0;
     padding-right: 0;
@@ -30,7 +30,7 @@
   &__blocks {
     padding: 90px 0px 48px 0;
     &--header {
-      font-family: "Mulish", sans-serif;
+      font-family: 'Mulish', sans-serif;
       font-style: normal;
       font-weight: bold;
       font-size: 24px;
@@ -42,9 +42,13 @@
 
     &--content {
       font-style: normal;
-      font-weight: 500;
+      font-weight: 300;
       font-size: 18px;
       line-height: 27px;
+
+      .contactInfo {
+        font-size: 14px;
+      }
     }
     ul {
       margin: 0;
@@ -113,7 +117,7 @@
 
       span,
       p {
-        font-family: "Mulish", sans-serif;
+        font-family: 'Mulish', sans-serif;
         font-weight: normal;
         font-size: 14px;
         line-height: 27px;
