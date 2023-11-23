@@ -19,7 +19,7 @@ import Footer from '../../components/Footer';
 
 import Illustration from '../../assets/images/illustration.png';
 import sajha from '../../assets/images/sajha-menu.png';
-import qrcode from '../../assets/images/qrcode.jpg';
+import qrcode from '../../assets/images/qrcode.png';
 import line from '../../assets/images/line.png';
 import demo from '../../assets/images/demo.gif';
 import CustomerVideo from '../../assets/images/Customer View.mp4';
